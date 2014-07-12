@@ -6,7 +6,8 @@ public class SADPMain
     {
         System.out.println("Rug");
     }
-    public static void main(String[] args){
+    public static void main(String[] args)
+    {
         SADPMain();
     }
 }
