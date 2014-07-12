@@ -2,10 +2,30 @@ To-Do List:
 Set-Up GitHub Repository
 Finalize Story
 Text Version of the Game
+Create Window
 Character Movement/Controls
 Main World
+    -HUD
     -Main World Objects
+    -Main World Terrain
     -Main World Object Interaction
 Individual Levels
-Objects
-AI
+    -HUD
+    -Characters
+    -Dialogue
+    -Objects
+    -AI
+    -Background
+Level System
+    -EXP
+    -Establish Level Ability
+Items
+    -Individual Items
+    -Item World Placement
+    -Inventory
+Save System
+Finalize Graphics
+Sounds(BY GERSH)
+Main Menu
+    -Options
+
