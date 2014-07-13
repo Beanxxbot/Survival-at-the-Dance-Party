@@ -1,6 +1,6 @@
 package com.bamgames.survivalatthedanceparty;
 
-import com.bamgames.survivalatthedanceparty.Area1.Dialog;
+import com.bamgames.survivalatthedanceparty.area1.Dialog;
 public class SADPMain
 {
     //In Window Make Screen Black

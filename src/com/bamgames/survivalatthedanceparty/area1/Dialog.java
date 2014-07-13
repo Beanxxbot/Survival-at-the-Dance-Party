@@ -1,4 +1,4 @@
-package com.bamgames.survivalatthedanceparty.Area1;
+package com.bamgames.survivalatthedanceparty.area1;
 
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.debug;
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.guardSpeak;
