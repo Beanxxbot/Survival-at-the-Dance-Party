@@ -2,6 +2,8 @@ package com.bamgames.survivalatthedanceparty.speaking;
 
 import com.bamgames.survivalatthedanceparty.reference.Reference;
 
+//This class is designed to help the dialog work easier
+
 public class Speaking
 {
     public static void guardSpeak(String saying)

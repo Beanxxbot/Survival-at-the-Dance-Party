@@ -1,10 +1,6 @@
 package com.bamgames.survivalatthedanceparty;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.Timer;
-
-import static com.bamgames.survivalatthedanceparty.hellsdoor.StoryWelcome.storyWelcome;
+import static com.bamgames.survivalatthedanceparty.area1.StoryWelcome.storyWelcome;
 
 public class SADPMain
 {
