@@ -4,9 +4,9 @@ import static com.bamgames.survivalatthedanceparty.speaking.Speaking.debug;
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.guardSpeak;
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.playerSpeak;
 
-public class StoryWelcome
+public class StoryWelcomeD
 {
-    public static void storyWelcome()
+    public static void storyWelcomeD()
     {
         System.out.println("???: Hey! Hey you!");
         System.out.println("???: Yeah yeah, over here! By the door marked 'hell'!");
@@ -30,3 +30,4 @@ public class StoryWelcome
 
     }
 }
+

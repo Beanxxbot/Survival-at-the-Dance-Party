@@ -1,6 +1,6 @@
 package com.bamgames.survivalatthedanceparty;
 
-import static com.bamgames.survivalatthedanceparty.area1.StoryWelcome.storyWelcome;
+import static com.bamgames.survivalatthedanceparty.area1.StoryWelcomeD.storyWelcomeD;
 
 public class SADPMain
 {
@@ -12,6 +12,6 @@ public class SADPMain
     public static void main(String[] args)
     {
         openingQuote();
-        storyWelcome();
+        storyWelcomeD();
     }
 }
