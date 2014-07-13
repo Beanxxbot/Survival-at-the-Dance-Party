@@ -6,7 +6,7 @@ import static com.bamgames.survivalatthedanceparty.speaking.Speaking.debug;
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.guardSpeak;
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.playerSpeak;
 
-public class Dialog
+public class Area1Dialog
 {
     public static void storyWelcome()
     {
