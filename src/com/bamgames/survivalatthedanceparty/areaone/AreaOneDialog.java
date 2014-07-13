@@ -1,4 +1,4 @@
-package com.bamgames.survivalatthedanceparty.area1;
+package com.bamgames.survivalatthedanceparty.areaone;
 
 import com.bamgames.survivalatthedanceparty.SADPMain;
 
@@ -6,7 +6,7 @@ import static com.bamgames.survivalatthedanceparty.speaking.Speaking.debug;
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.guardSpeak;
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.playerSpeak;
 
-public class Area1Dialog
+public class AreaOneDialog
 {
     public static void storyWelcome()
     {
