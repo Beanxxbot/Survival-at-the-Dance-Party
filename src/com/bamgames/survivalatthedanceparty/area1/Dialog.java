@@ -1,5 +1,7 @@
 package com.bamgames.survivalatthedanceparty.area1;
 
+import com.bamgames.survivalatthedanceparty.SADPMain;
+
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.debug;
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.guardSpeak;
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.playerSpeak;
@@ -62,6 +64,6 @@ public class Dialog
         debug("A blinding bright light appears...");
         //Area1 Finished
         debug("Area 1 Complete");
-
+        SADPMain.nextArea();
     }
 }

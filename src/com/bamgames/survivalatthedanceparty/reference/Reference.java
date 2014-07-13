@@ -6,5 +6,4 @@ public class Reference
     public static String player = "You";
     public static String wizard = "Wiz D";
     public static String mone = "Mone";
-
 }
