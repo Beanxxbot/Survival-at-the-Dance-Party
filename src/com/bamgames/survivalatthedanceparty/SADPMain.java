@@ -1,7 +1,6 @@
 package com.bamgames.survivalatthedanceparty;
 
-import static com.bamgames.survivalatthedanceparty.area1.StoryWelcomeD.storyWelcomeD;
-
+import com.bamgames.survivalatthedanceparty.Area1.Dialog;
 public class SADPMain
 {
     //In Window Make Screen Black
@@ -12,6 +11,6 @@ public class SADPMain
     public static void main(String[] args)
     {
         openingQuote();
-        storyWelcomeD();
+        Dialog.storyWelcome();
     }
 }
