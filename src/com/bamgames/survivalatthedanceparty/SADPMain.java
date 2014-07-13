@@ -6,31 +6,12 @@ import javax.swing.Timer;
 
 public class SADPMain
 {
-    static ActionListener listener = new ActionListener()
-    {
-        @Override
-        public void actionPerformed(ActionEvent e)
-        {
-
-        }
-    };
-    static Timer timer = new Timer(1000, listener);
-
-    public static void SADPMain()
-    {
-        timer.start();
-        if (timer.isRunning())
-        {
-            System.out.println("Running");
-        }
-        else
-        {
-            System.out.println("Not Running");
-        }
-        //System.out.println("Timer");
+    //In Window Make Screen Black
+    public static void openingQuote(){
+        System.out.println("Hell is a big party. The reason why it has such a bad reputation is because the devil doesn't want everyone going to hell. It's an exclusive party...");
     }
     public static void main(String[] args)
     {
-        SADPMain();
+        openingQuote();
     }
 }
