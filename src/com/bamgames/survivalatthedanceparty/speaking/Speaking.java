@@ -20,5 +20,13 @@ public class Speaking
     {
         System.out.println(Reference.mone + ": " + saying);
     }
+    public static void qSpeak(String saying)
+    {
+        System.out.println("???: " + saying);
+    }
+    public static void debug(String saying)
+    {
+        System.out.println("[DEBUG] " + saying);
+    }
 
 }
