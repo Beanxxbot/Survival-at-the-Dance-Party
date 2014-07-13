@@ -1,7 +1,6 @@
 package com.bamgames.survivalatthedanceparty;
 
-import com.bamgames.survivalatthedanceparty.area1.Area1Dialog;
-import com.bamgames.survivalatthedanceparty.area2.Area2Dialog;
+import com.bamgames.survivalatthedanceparty.area1.Dialog;
 
 import java.util.Scanner;
 
@@ -26,7 +25,6 @@ public class SADPMain
     public static void main(String[] args)
     {
         openingQuote();
-        Area1Dialog.storyWelcome();
-        Area2Dialog.hello();
+        Dialog.storyWelcome();
     }
 }
