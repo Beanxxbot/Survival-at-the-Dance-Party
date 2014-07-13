@@ -8,7 +8,7 @@ public class StoryWelcome
     {
         System.out.println("???: Hey! Hey you!");
         System.out.println("???: Yeah yeah, over here! By the door marked 'hell'!");
-        System.out.println("???: Hello, my name");
+        System.out.println("???: Hello, my name is... well call me Guard");
         guardSpeak("Hi!");
     }
 }
