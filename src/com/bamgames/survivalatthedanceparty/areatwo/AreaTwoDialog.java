@@ -2,9 +2,7 @@ package com.bamgames.survivalatthedanceparty.areatwo;
 
 import com.bamgames.survivalatthedanceparty.SADPMain;
 
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.debug;
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.wizardSpeak;
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.playerSpeak;
+import static com.bamgames.survivalatthedanceparty.speaking.Speaking.*;
 
 public class AreaTwoDialog
 {
@@ -28,9 +26,19 @@ public class AreaTwoDialog
     wizardSpeak("Oh... Well what do you want to know?");
     //Bring up menu of questions to ask
     debug("Bring up menu of questions to ask \n 1.Why is hell like this? \n 2.Why am I in hell? \n 3.Why am I here?");
-
-    //Sirawesomeknight WILL DO 7/13/2014 Answer to questions here
-
+    debug("Why is hell like this?");
+    wizardSpeak("Hell has always been like this. This is how it was from the start. The devil wanted it to be fun and joyous. A little different than heavens joyous, but still quite fun.");
+    playerSpeak("I see");
+    wizardSpeak("So in truth I don't know why you should ask the devil. HE RUNS IT.");
+    debug("Why am I in hell?");
+    wizardSpeak("Well heaven didn't let you in. Then the devil accepted you. Very few know why a decision is made. You must ask the devil to get that answer.");
+    debug("Why am I here?");
+    wizardSpeak("A monster named Mone almost killed you. If you die in hell you suffer through the most pain and misery you can possibly face, and then you reappear. I stopped Mone because you don't know what you are doing. I rescued you.");
+    playerSpeak("That was very nice of you to save me. That information is very helpful to know.");
+    wizardSpeak("There is no nice in hell remember. Infact your going to have to get out of my house soon.");
+    playerSpeak("Why?");
+    wizardSpeak("I have done enough for you. After you don't have anymore questions. Just... Get Out!");
+    playerSpeak("Nothing is nice in hell...");
     //Bring up menu of secondary questions
     debug("Bring up menu of secondary questions to ask \n 1.Where can I meet the Devil?(After Why am I in hell?) \n 2.Where can I go to find Mone?(After Why am I here?)");
 
