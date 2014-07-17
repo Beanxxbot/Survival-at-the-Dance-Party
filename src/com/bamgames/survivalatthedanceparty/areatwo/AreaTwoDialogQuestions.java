@@ -121,6 +121,7 @@ public static boolean exceptionQuestionAsked = false;
                 playerSpeak("Where can I go to find Mone?");
                 wizardSpeak("Go back to the club in the Hellscity that you arrived at. That's the best place to check.");
                 isSecondaryThree = false;
+                whichTwo++;
                 if(exceptionQuestionAsked) {
                     twoAsked = true;
                     whichTwo++;
@@ -132,6 +133,7 @@ public static boolean exceptionQuestionAsked = false;
                 wizardSpeak("Well heaven didn't let you in. Then the devil accepted you. Very few know why a decision is made. You must ask the devil to get that answer.");
                 if(whichTwo == 2){
                     twoAsked = true;
+                    System.out.println(whichTwo);
                 }
                 exceptionQuestionAsked = true;
                 initialQuestions();

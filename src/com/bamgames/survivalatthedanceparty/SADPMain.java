@@ -1,5 +1,6 @@
 package com.bamgames.survivalatthedanceparty;
 
+import com.bamgames.survivalatthedanceparty.areafive.AreaFiveDialog;
 import com.bamgames.survivalatthedanceparty.areaone.AreaOneDialog;
 import com.bamgames.survivalatthedanceparty.areatwo.AreaTwoDialog;
 
@@ -18,7 +19,7 @@ public class SADPMain
         Scanner ready = new Scanner(System.in);
         String check = ready.nextLine();
         if(check.equals("yes")){
-
+        //Program finishes and main action line goes to next action by default
         }else{
             nextArea();
         }
@@ -28,5 +29,8 @@ public class SADPMain
         openingQuote();
         AreaOneDialog.storyWelcome();
         AreaTwoDialog.dHouse();
+
+
+        AreaFiveDialog.templeDialog();
     }
 }
