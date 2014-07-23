@@ -2,6 +2,7 @@ package com.bamgames.survivalatthedanceparty;
 
 import com.bamgames.survivalatthedanceparty.areafive.AreaFiveDialog;
 import com.bamgames.survivalatthedanceparty.areaone.AreaOneDialog;
+import com.bamgames.survivalatthedanceparty.areaseven.AreaSevenDialog;
 import com.bamgames.survivalatthedanceparty.areatwo.AreaTwoDialog;
 
 import java.util.Scanner;
@@ -32,5 +33,6 @@ public class SADPMain
 
 
         AreaFiveDialog.templeDialog();
+        AreaSevenDialog.searchForClubHunter();
     }
 }
