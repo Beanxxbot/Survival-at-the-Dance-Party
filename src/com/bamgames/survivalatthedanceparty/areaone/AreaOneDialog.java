@@ -60,7 +60,7 @@ public class AreaOneDialog
         debug("Flashing arrow to Health bar first.");
         debug("Flashing arrow to Exp bar second");
         guardSpeak("Oh I should probably also mention you also took some damage so you lost health. However, you gained experience!");
-        playerSpeak("Well now that's over time for some peace. I finally won!");
+        playerSpeak("Well now that's over, time for some peace. I finally won!");
         System.out.println("???: NO FLIMSY NUGGET LIKE YOU GETS OUT OF HERE AND KILLS MY PALS! NOBODY!");
         playerSpeak("Who are you?");
         guardSpeak("Oh he's");
