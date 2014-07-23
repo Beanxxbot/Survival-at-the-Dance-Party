@@ -1,5 +1,6 @@
 package com.bamgames.survivalatthedanceparty;
 
+import com.bamgames.survivalatthedanceparty.areaeight.AreaEightDialog;
 import com.bamgames.survivalatthedanceparty.areafive.AreaFiveDialog;
 import com.bamgames.survivalatthedanceparty.areaone.AreaOneDialog;
 import com.bamgames.survivalatthedanceparty.areaseven.AreaSevenDialog;
@@ -34,5 +35,6 @@ public class SADPMain
 
         AreaFiveDialog.templeDialog();
         AreaSevenDialog.searchForClubHunter();
+        AreaEightDialog.clubHunters();
     }
 }

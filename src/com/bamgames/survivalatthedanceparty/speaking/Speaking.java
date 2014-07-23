@@ -30,5 +30,7 @@ public class Speaking
     {
         System.out.println("[DEBUG] " + saying);
     }
+    public static void hunterSpeak(String saying) { System.out.println(Reference.hunter + ": " + saying); }
+    public static void wizqSpeak(String saying) { System.out.println(Reference.wizq + ": " + saying); }
 
 }
