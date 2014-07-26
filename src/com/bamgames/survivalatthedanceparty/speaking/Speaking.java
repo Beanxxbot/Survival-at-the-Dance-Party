@@ -32,5 +32,8 @@ public class Speaking
     }
     public static void hunterSpeak(String saying) { System.out.println(Reference.hunter + ": " + saying); }
     public static void wizqSpeak(String saying) { System.out.println(Reference.wizq + ": " + saying); }
-
+    public static void kingSpeak(String saying) { System.out.println(Reference.kingClub + ": " + saying); }
+    public static void ehyoSpeak(String saying) { System.out.println(Reference.eh + ": " + saying); }
+    public static void wizbSpeak(String saying) { System.out.println(Reference.wizb + ": " + saying); }
+    public static void wizjSpeak(String saying) { System.out.println(Reference.wizj + ": " + saying); }
 }

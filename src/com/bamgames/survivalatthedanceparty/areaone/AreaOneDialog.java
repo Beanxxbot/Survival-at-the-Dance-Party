@@ -3,9 +3,7 @@ package com.bamgames.survivalatthedanceparty.areaone;
 import com.bamgames.survivalatthedanceparty.SADPMain;
 import java.util.Scanner;
 
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.debug;
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.guardSpeak;
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.playerSpeak;
+import static com.bamgames.survivalatthedanceparty.speaking.Speaking.*;
 
 public class AreaOneDialog
 {
@@ -61,10 +59,10 @@ public class AreaOneDialog
         debug("Flashing arrow to Exp bar second");
         guardSpeak("Oh I should probably also mention you also took some damage so you lost health. However, you gained experience!");
         playerSpeak("Well now that's over, time for some peace. I finally won!");
-        System.out.println("???: NO FLIMSY NUGGET LIKE YOU GETS OUT OF HERE AND KILLS MY PALS! NOBODY!");
+        qSpeak("NO FLIMSY NUGGET LIKE YOU GETS OUT OF HERE AND KILLS MY PALS! NOBODY!");
         playerSpeak("Who are you?");
         guardSpeak("Oh he's");
-        System.out.println("BE QUIET! ENOUGH TALK!");
+        qSpeak("BE QUIET! ENOUGH TALK!");
         //Mone smashes player
         debug("Mone Smashed the Player");
         //Blinding bright light

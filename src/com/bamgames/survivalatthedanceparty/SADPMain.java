@@ -1,9 +1,15 @@
 package com.bamgames.survivalatthedanceparty;
 
 import com.bamgames.survivalatthedanceparty.areaeight.AreaEightDialog;
+import com.bamgames.survivalatthedanceparty.areaeighteen.AreaEighteenDialog;
 import com.bamgames.survivalatthedanceparty.areafive.AreaFiveDialog;
+import com.bamgames.survivalatthedanceparty.areafourteen.AreaFourteenDialog;
 import com.bamgames.survivalatthedanceparty.areaone.AreaOneDialog;
 import com.bamgames.survivalatthedanceparty.areaseven.AreaSevenDialog;
+import com.bamgames.survivalatthedanceparty.areasixteen.AreaSixteenDialog;
+import com.bamgames.survivalatthedanceparty.areaten.AreaTenDialog;
+import com.bamgames.survivalatthedanceparty.areatwelve.AreaTwelveDialog;
+import com.bamgames.survivalatthedanceparty.areatwenty.AreaTwentyDialog;
 import com.bamgames.survivalatthedanceparty.areatwo.AreaTwoDialog;
 
 import java.util.Scanner;
@@ -36,5 +42,17 @@ public class SADPMain
         AreaFiveDialog.templeDialog();
         AreaSevenDialog.searchForClubHunter();
         AreaEightDialog.clubHunters();
+
+        AreaTenDialog.storyOfTheClubs();
+
+        AreaTwelveDialog.surprise();
+
+        AreaFourteenDialog.kingClub();
+
+        AreaSixteenDialog.runDownTown();
+
+        AreaEighteenDialog.theWizQAmbush();
+
+        AreaTwentyDialog.doorGuardDropsBy();
     }
 }
