@@ -1,9 +1,12 @@
 package com.bamgames.survivalatthedanceparty.areaone;
 
 import com.bamgames.survivalatthedanceparty.SADPMain;
+import com.bamgames.survivalatthedanceparty.reference.Reference;
+import com.bamgames.survivalatthedanceparty.util.NamePrompt;
+
 import java.util.Scanner;
 
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.*;
+import static com.bamgames.survivalatthedanceparty.util.Speaking.*;
 
 public class AreaOneDialog
 {
@@ -15,10 +18,7 @@ public class AreaOneDialog
         System.out.println("???: Hello, my name is... well call me Guard");
         guardSpeak("Hello. Welcome to hell.");
         guardSpeak("For registration purposes I need to ask your name");
-        Scanner one = new Scanner(System.in);
-        String name1 = one.nextLine();
-        getName = name1;
-        guardSpeak("Ahh " + getName + "...That's a ugly name!");
+        guardSpeak("Ahh " + Reference.name + "...That's a ugly name!");
         playerSpeak("What the heck? What happened? Why did I end up in hell!");
         guardSpeak("No no no, you've got it all wrong. It's not a bad thing to end up here");
         playerSpeak("What do you mean!? Of course hell is bad!");
