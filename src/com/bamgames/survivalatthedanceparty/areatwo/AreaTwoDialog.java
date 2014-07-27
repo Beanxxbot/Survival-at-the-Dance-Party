@@ -2,7 +2,7 @@ package com.bamgames.survivalatthedanceparty.areatwo;
 
 import com.bamgames.survivalatthedanceparty.SADPMain;
 
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.*;
+import static com.bamgames.survivalatthedanceparty.util.Speaking.*;
 
 public class AreaTwoDialog
 {

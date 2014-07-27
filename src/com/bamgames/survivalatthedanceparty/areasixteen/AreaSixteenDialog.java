@@ -1,6 +1,6 @@
 package com.bamgames.survivalatthedanceparty.areasixteen;
 
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.*;
+import static com.bamgames.survivalatthedanceparty.util.Speaking.*;
 
 public class AreaSixteenDialog {
     public static void runDownTown(){

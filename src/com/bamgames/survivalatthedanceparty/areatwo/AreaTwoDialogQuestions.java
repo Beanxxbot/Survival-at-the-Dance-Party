@@ -2,9 +2,9 @@ package com.bamgames.survivalatthedanceparty.areatwo;
 
 import java.util.Scanner;
 
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.debug;
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.playerSpeak;
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.wizardSpeak;
+import static com.bamgames.survivalatthedanceparty.util.Speaking.debug;
+import static com.bamgames.survivalatthedanceparty.util.Speaking.playerSpeak;
+import static com.bamgames.survivalatthedanceparty.util.Speaking.wizardSpeak;
 
 public class AreaTwoDialogQuestions
 {

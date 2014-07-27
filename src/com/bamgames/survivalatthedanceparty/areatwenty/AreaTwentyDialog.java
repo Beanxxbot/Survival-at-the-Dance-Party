@@ -1,6 +1,6 @@
 package com.bamgames.survivalatthedanceparty.areatwenty;
 
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.*;
+import static com.bamgames.survivalatthedanceparty.util.Speaking.*;
 import static com.bamgames.survivalatthedanceparty.reference.Reference.*;
 
 public class AreaTwentyDialog {

@@ -2,7 +2,7 @@ package com.bamgames.survivalatthedanceparty.areafourteen;
 
 import com.bamgames.survivalatthedanceparty.SADPMain;
 
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.*;
+import static com.bamgames.survivalatthedanceparty.util.Speaking.*;
 import static com.bamgames.survivalatthedanceparty.reference.Reference.*;
 
 public class AreaFourteenDialog {
