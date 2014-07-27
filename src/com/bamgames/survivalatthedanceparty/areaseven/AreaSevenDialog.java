@@ -2,7 +2,7 @@ package com.bamgames.survivalatthedanceparty.areaseven;
 
 import com.bamgames.survivalatthedanceparty.main.SADPMain;
 
-import static com.bamgames.survivalatthedanceparty.speaking.Speaking.*;
+import static com.bamgames.survivalatthedanceparty.util.Speaking.*;
 public class AreaSevenDialog {
 
     public static void searchForClubHunter(){

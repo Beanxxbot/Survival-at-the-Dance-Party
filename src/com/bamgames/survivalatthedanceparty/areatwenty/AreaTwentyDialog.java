@@ -1,7 +1,5 @@
 package com.bamgames.survivalatthedanceparty.areatwenty;
 
-import com.bamgames.survivalatthedanceparty.main.SADPMain;
-
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.*;
 import static com.bamgames.survivalatthedanceparty.reference.Reference.*;
 
@@ -19,6 +17,5 @@ public class AreaTwentyDialog {
         guardSpeak("I merely came to tell you to be on guard at all times. For good luck take this! If you need me for anything come get me in Heaven's Light. I'm setting up a shop there.");
         //Area 20 Finished
         debug("Area 20 Completed");
-        SADPMain.nextArea();
     }
 }
