@@ -1,6 +1,6 @@
 package com.bamgames.survivalatthedanceparty.areatwelve;
 
-import com.bamgames.survivalatthedanceparty.SADPMain;
+import com.bamgames.survivalatthedanceparty.main.SADPMain;
 
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.*;
 import static com.bamgames.survivalatthedanceparty.reference.Reference.name;

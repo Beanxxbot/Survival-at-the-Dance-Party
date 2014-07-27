@@ -1,5 +1,7 @@
 package com.bamgames.survivalatthedanceparty.areaeighteen;
 
+import com.bamgames.survivalatthedanceparty.main.SADPMain;
+
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.*;
 import static com.bamgames.survivalatthedanceparty.reference.Reference.*;
 
@@ -63,5 +65,6 @@ public class AreaEighteenDialog {
        hunterSpeak("I still can't believe you killed Wiz Q! Wiz Q... Customer for 3,209 years!");
        //Area 18 Finished
        debug("Area 18 Completed");
+        SADPMain.nextArea();
     }
 }

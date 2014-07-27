@@ -1,6 +1,6 @@
 package com.bamgames.survivalatthedanceparty.areaten;
 
-import com.bamgames.survivalatthedanceparty.SADPMain;
+import com.bamgames.survivalatthedanceparty.main.SADPMain;
 
 import static com.bamgames.survivalatthedanceparty.speaking.Speaking.*;
 
