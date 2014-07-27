@@ -1,6 +1,6 @@
 package com.bamgames.survivalatthedanceparty.areaone;
 
-import com.bamgames.survivalatthedanceparty.SADPMain;
+import com.bamgames.survivalatthedanceparty.main.SADPMain;
 import com.bamgames.survivalatthedanceparty.reference.Reference;
 import com.bamgames.survivalatthedanceparty.util.NamePrompt;
 
