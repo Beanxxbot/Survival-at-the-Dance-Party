@@ -35,7 +35,7 @@ public class SADPMain
     }
     public static void main(String[] args)
     {
-//        openingQuote();
+        openingQuote();
 //        AreaOneDialog.storyWelcome();
 //        AreaTwoDialog.dHouse();
 //
