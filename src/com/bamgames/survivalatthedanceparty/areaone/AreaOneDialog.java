@@ -35,7 +35,7 @@ public class AreaOneDialog
         //fade out
         debug("Fade Out");
         //Enter crazy party
-        guardSpeak("So... It appears this party has gone out of hand...");
+        guardSpeak("So... It appears this party has gone out of hand...");  
         //Play dubstep music
         playerSpeak("This is quite a party");
         //Enemies come in
