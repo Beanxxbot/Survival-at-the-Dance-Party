@@ -13,12 +13,12 @@ public class AreaOneDialog
     public static String getName;
     public static void storyWelcome()
     {
-        System.out.println("???: Hey! Hey you!");
-        System.out.println("???: Yeah yeah, over here! By the door marked 'hell'!");
-        System.out.println("???: Hello, my name is... well call me Guard");
-        guardSpeak("Hello. Welcome to hell.");
-        guardSpeak("For registration purposes I need to ask your name");
-        guardSpeak("Ahh " + Reference.name + "...That's a ugly name!");
+        qSpeak("Hey! Hey you!");
+        qSpeak("Yeah yeah, over here! By the door marked 'hell'!");
+        qSpeak("Hello. Welcome to hell.");
+        qSpeak("For registration purposes I need to ask your name");
+        qSpeak("Ahh " + Reference.name + "...That's a ugly name!");
+        qSpeak("My name is... well call me Guard");
         playerSpeak("What the heck? What happened? Why did I end up in hell!");
         guardSpeak("No no no, you've got it all wrong. It's not a bad thing to end up here");
         playerSpeak("What do you mean!? Of course hell is bad!");

@@ -6,6 +6,10 @@ import com.bamgames.survivalatthedanceparty.reference.Reference;
 
 public class Speaking
 {
+    public static void playerSpeak(String saying)
+    {
+        System.out.println(Reference.name + ": " + saying);
+    }
     public static void guardSpeak(String saying)
     {
         System.out.println(Reference.doorGuard + ": " + saying);
@@ -32,8 +36,4 @@ public class Speaking
     public static void ehyoSpeak(String saying) { System.out.println(Reference.eh + ": " + saying); }
     public static void wizbSpeak(String saying) { System.out.println(Reference.wizb + ": " + saying); }
     public static void wizjSpeak(String saying) { System.out.println(Reference.wizj + ": " + saying); }
-    public static void playerSpeak(String saying)
-    {
-        System.out.println(Reference.name + ": " + saying);
-    }
 }
