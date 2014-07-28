@@ -33,8 +33,7 @@ public class SADPMain
             nextArea();
         }
     }
-    public static void main(String[] args)
-    {
+    public static void main(String[] args){
         openingQuote();
 //        AreaOneDialog.storyWelcome();
 //        AreaTwoDialog.dHouse();

@@ -13,4 +13,5 @@ public abstract class GameState{
     public abstract void keyReleased(int k);
     public abstract void mousePressed(int m);
     public abstract void mouseReleased(int m);
+    public abstract void mouseMoved(int x, int y);
 }

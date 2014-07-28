@@ -7,13 +7,10 @@ import javax.swing.JPanel;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.awt.image.BufferedImage;
 
-public class GamePanel extends JPanel implements Runnable, KeyListener, MouseListener{
+public class GamePanel extends JPanel implements Runnable, KeyListener, MouseListener, MouseMotionListener{
     //Measurements
     //Will be adjusted
     public static final int width = 700;
@@ -60,6 +57,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
         super.addNotify();
         thread = new Thread(this);
         addKeyListener(this);
+        addMouseListener(this);
+        addMouseMotionListener(this);
         thread.start();
     }
     private void initialize(){
@@ -84,16 +83,12 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
                 sleepTime = 0;
                 sleepTime = targetTime - completed / 100000;
             }
-            System.out.println(sleepTime);
             try{
                 thread.sleep(sleepTime);
             }catch(Exception e){
                 e.printStackTrace();
             }
         }
-    }
-    public void mousePosition(){
-
     }
     private void gameUpdate(){
         gsm.update();
@@ -119,15 +114,21 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
 
     }
     public void mousePressed(MouseEvent e) {
-        gsm.mousePressed(e.getButton());
+        gsm.mousePressed(e.getClickCount());
     }
     public void mouseReleased(MouseEvent e) {
-        gsm.mouseReleased(e.getButton());
+        gsm.mouseReleased(e.getClickCount());
     }
     public void mouseEntered(MouseEvent e) {
 
     }
     public void mouseExited(MouseEvent e) {
 
+    }
+    public void mouseDragged(MouseEvent e) {
+
+    }
+    public void mouseMoved(MouseEvent e) {
+        gsm.mouseMoved(e.getXOnScreen(),e.getYOnScreen());
     }
 }

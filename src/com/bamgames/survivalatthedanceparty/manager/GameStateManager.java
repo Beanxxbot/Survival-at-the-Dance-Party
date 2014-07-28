@@ -35,6 +35,7 @@ public class GameStateManager {
     public void keyReleased(int k){
         gameStates.get(currentState).keyReleased(k);
     }
+    public void mouseMoved(int x, int y){ gameStates.get(currentState).mouseMoved(x,y); }
     public void mousePressed(int m) { gameStates.get(currentState).mousePressed(m);}
     public void mouseReleased(int m) { gameStates.get(currentState).mouseReleased(m);}
 }

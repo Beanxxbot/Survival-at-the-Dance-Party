@@ -10,6 +10,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 public class MenuState extends GameState{
+    private Thread thread;
+    private int FPS = 60;
+    private int targetTime = FPS / 1000;
+    private long start;
+    private long completed;
+    private long waitTime;
     private int colorChooser;
     private String[] title = {
        "S","u","r","v","i","v","a","l","a","t","t","h","e","D","a","n","c","e","P","a","r","t","y"
@@ -27,14 +33,22 @@ public class MenuState extends GameState{
         b = new Background("/Backgrounds/tempmenu.jpg");
     }
     private void fancyTitle(Graphics2D g){
+        start = System.nanoTime();
         for(int i = 0; i < title.length; i++){
         changeColor(g);
         g.drawString(title[i], 200 + i * 15, 50);
         }
+        completed = System.nanoTime() - start;
+        waitTime = targetTime - waitTime / 1000000;
+        try{
+          thread.sleep(waitTime);
+        }catch(Exception e){
+          e.printStackTrace();
+        }
     }
     public void changeColor(Graphics2D g){
-            colorChooser = 1;
             g.setColor(colors[colorChooser]);
+            colorChooser++;
             if(colorChooser >= colors.length){
                 colorChooser = 0;
             }
@@ -57,7 +71,9 @@ public class MenuState extends GameState{
 
     }
     public void render(Graphics2D g){
-        b.render(g);
+        thread = new Thread();
+        thread.start();
+       // b.render(g);
         g.setColor(Color.RED);
         g.setFont(new Font("Gill Sans", Font.ITALIC + Font.BOLD, 30));
         fancyTitle(g);
@@ -72,12 +88,12 @@ public class MenuState extends GameState{
         }
     }
     public void keyPressed(int k){
-        if(k == KeyEvent.VK_UP){
+        if(k == KeyEvent.VK_W){
             currentChoice--;
             if(currentChoice <= -1){
                 currentChoice = 0;
             }
-        }else if(k == KeyEvent.VK_DOWN){
+        }else if(k == KeyEvent.VK_S){
             currentChoice++;
             if(currentChoice >= 4){
                 currentChoice = 3;
@@ -90,9 +106,22 @@ public class MenuState extends GameState{
 
     }
     public void mousePressed(int m){
-
+        if(m == 1){
+            selection();
+        }
     }
     public void mouseReleased(int m){
 
+    }
+    public void mouseMoved(int x, int y){
+        if(x >= 606 && y <= 359 && x <= 743 && y >= 320){
+            currentChoice = 0;
+        }else if(x >= 605 && y <= 418 && x <= 836 && y >= 387){
+            currentChoice = 1;
+        }else if(x >= 600 && y <= 481 && x <= 777 && y >= 443){
+            currentChoice = 2;
+        }else if(x >= 606 && y <= 537 && x <= 724 && y >= 506){
+            currentChoice = 3;
+        }
     }
 }
