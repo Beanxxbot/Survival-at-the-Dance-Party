@@ -3,6 +3,7 @@ package com.bamgames.survivalatthedanceparty.gamestates;
 import   com.bamgames.survivalatthedanceparty.main.GamePanel;
 import com.bamgames.survivalatthedanceparty.graphics.Background;
 import com.bamgames.survivalatthedanceparty.gamestates.SettingsState;
+import com.bamgames.survivalatthedanceparty.gamestates.GameState;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -17,6 +18,7 @@ public class MenuState{
     private int colorChooser;
     AboutState a;
     SettingsState s;
+    GameState gs;
     private String[] title = {
        "S","u","r","v","i","v","a","l","a","t","t","h","e","D","a","n","c","e","P","a","r","t","y"
     };
@@ -56,7 +58,9 @@ public class MenuState{
     }
     private void selection(){
         if(currentChoice == 0){
-            //start
+            GP.shouldRepaint = true;
+            gs = new GameState();
+            GP.GSM = 3;
         }else if(currentChoice == 1){
             GP.shouldRepaint = true;
             s = new SettingsState();
