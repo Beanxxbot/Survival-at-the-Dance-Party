@@ -1,7 +1,7 @@
 package com.bamgames.survivalatthedanceparty.main;
 
+import com.bamgames.survivalatthedanceparty.gamestates.AboutState;
 import com.bamgames.survivalatthedanceparty.gamestates.MenuState;
-import com.bamgames.survivalatthedanceparty.manager.GameStateManager;
 
 import javax.swing.JPanel;
 import java.awt.Dimension;
@@ -33,13 +33,18 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
     //Graphics
     private BufferedImage paintbrush;
     private Graphics2D g;
+    public static boolean shouldRepaint;
 
     //Mouse Position
     int x;
     int y;
 
-    //Reference to Game State Manager
-    GameStateManager gsm;
+    //GameManager
+    public static int GSM;
+
+    //References to States of Game
+    MenuState m;
+    AboutState a;
 
     public GamePanel(){
         getPosition();
@@ -62,9 +67,11 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
         thread.start();
     }
     private void initialize(){
+        m = new MenuState();
+        a = new AboutState();
         paintbrush = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         g = (Graphics2D) paintbrush.getGraphics();
-        gsm = new GameStateManager();
+        GSM = 0;
     }
     public void run(){
         initialize();
@@ -91,10 +98,33 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
         }
     }
     private void gameUpdate(){
-        gsm.update();
+        switch (GSM) {
+            case 0:
+            m.update();
+                break;
+            case 1:
+            a.update();
+                break;
+            default:
+                System.out.println("Game Update GSM Error");
+        }
+        if(shouldRepaint){
+            super.paintComponent(g);
+            shouldRepaint = false;
+        }
     }
     private void gameRender(){
-        gsm.render(g);
+        switch (GSM) {
+            case 0:
+            m.render(g);
+                break;
+            case 1:
+                a.render(g);
+                break;
+            default:
+                System.out.println("Game Render GSM Error");
+                break;
+        }
     }
     private void draw(){
        Graphics d = getGraphics();
@@ -105,19 +135,59 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
 
     }
     public void keyPressed(KeyEvent e) {
-        gsm.keyPressed(e.getKeyCode());
+        switch (GSM) {
+            case 0:
+            m.keyPressed(e.getKeyCode());
+                break;
+            case 1:
+                a.keyPressed(e.getKeyCode());
+                break;
+            default:
+            System.out.println("keyPressed GSM Error");
+                break;
+        }
     }
     public void keyReleased(KeyEvent e) {
-        gsm.keyReleased(e.getKeyCode());
+        switch (GSM) {
+            case 0:
+            m.keyReleased(e.getKeyCode());
+                break;
+            case 1:
+            a.keyReleased(e.getKeyCode());
+                break;
+            default:
+                System.out.println("keyReleased GSM Error");
+                break;
+        }
     }
     public void mouseClicked(MouseEvent e) {
 
     }
     public void mousePressed(MouseEvent e) {
-        gsm.mousePressed(e.getClickCount());
+        switch(GSM) {
+            case 0:
+                m.mousePressed(e.getClickCount());
+                break;
+            case 1:
+                a.mousePressed(e.getClickCount());
+                break;
+            default:
+                System.out.println("mousePressed GSM Error");
+                break;
+        }
     }
     public void mouseReleased(MouseEvent e) {
-        gsm.mouseReleased(e.getClickCount());
+        switch(GSM) {
+            case 0:
+            m.mouseReleased(e.getClickCount());
+                break;
+            case 1:
+                a.mouseReleased(e.getClickCount());
+                break;
+            default:
+                System.out.println("mouseReleased GSM Error");
+                break;
+        }
     }
     public void mouseEntered(MouseEvent e) {
 
@@ -129,6 +199,16 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
 
     }
     public void mouseMoved(MouseEvent e) {
-        gsm.mouseMoved(e.getXOnScreen(),e.getYOnScreen());
+       switch(GSM){
+           case 0:
+           m.mouseMoved(e.getXOnScreen(),e.getYOnScreen());
+               break;
+           case 1:
+           a.mouseMoved(e.getXOnScreen(),e.getYOnScreen());
+               break;
+           default:
+               System.out.println("Mouse Moved GSM Error");
+               break;
+           }
+       }
     }
-}

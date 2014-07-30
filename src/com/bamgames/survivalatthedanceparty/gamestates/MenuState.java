@@ -1,15 +1,12 @@
 package com.bamgames.survivalatthedanceparty.gamestates;
 
-import com.bamgames.survivalatthedanceparty.main.GamePanel;
-import com.bamgames.survivalatthedanceparty.manager.GameStateManager;
-import com.bamgames.survivalatthedanceparty.manager.GameState;
+import  com.bamgames.survivalatthedanceparty.main.GamePanel;
 import com.bamgames.survivalatthedanceparty.graphics.Background;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
 
-public class MenuState extends GameState{
+public class MenuState{
     private Thread thread;
     private int FPS = 60;
     private int targetTime = FPS / 1000;
@@ -17,6 +14,7 @@ public class MenuState extends GameState{
     private long completed;
     private long waitTime;
     private int colorChooser;
+    AboutState a;
     private String[] title = {
        "S","u","r","v","i","v","a","l","a","t","t","h","e","D","a","n","c","e","P","a","r","t","y"
     };
@@ -28,9 +26,10 @@ public class MenuState extends GameState{
     };
     int currentChoice = 0;
     Background b;
-    public MenuState(GameStateManager gsm){
-        this.gsm = gsm;
-        b = new Background("/Backgrounds/tempmenu.jpg");
+    GamePanel GP;
+
+    public MenuState(){
+        b = new Background("/Backgrounds/tempbackground.jpg");
     }
     private void fancyTitle(Graphics2D g){
         start = System.nanoTime();
@@ -59,13 +58,12 @@ public class MenuState extends GameState{
         }else if(currentChoice == 1){
             //settings
         }else if(currentChoice == 2){
-            //about
+            GP.shouldRepaint = true;
+            a = new AboutState();
+            GP.GSM = 1;
         }else if(currentChoice == 3){
             System.exit(0);
         }
-    }
-    public void initialize(){
-
     }
     public void update(){
 
@@ -73,7 +71,7 @@ public class MenuState extends GameState{
     public void render(Graphics2D g){
         thread = new Thread();
         thread.start();
-       // b.render(g);
+        b.render(g);
         g.setColor(Color.RED);
         g.setFont(new Font("Gill Sans", Font.ITALIC + Font.BOLD, 30));
         fancyTitle(g);
