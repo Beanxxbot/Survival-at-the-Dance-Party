@@ -112,12 +112,12 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
             draw();
             completed = System.nanoTime() - start;
             sleepTime = targetTime - completed / 1000000;
-            if(sleepTime <= -1){
-                sleepTime = 0;
-                sleepTime = targetTime - completed / 100000;
+            if(sleepTime <= 0){
+                sleepTime = 10;
             }
             try{
                 thread.sleep(sleepTime);
+                System.out.println(sleepTime);
             }catch(Exception e){
                 e.printStackTrace();
             }
@@ -148,7 +148,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
                 s.keyPressed(e.getKeyCode());
                 break;
             case 3:
-                gs.keyPressed(e.getKeyCode(),e.isActionKey());
+                gs.keyPressed(e.getKeyCode());
                 break;
             default:
             System.out.println("keyPressed GSM Error");

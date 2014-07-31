@@ -18,9 +18,11 @@ public class Player {
         locationx = 0;
         locationy = 0;
     }
-    public void render(Graphics2D g, int x, int y){
-        g.drawImage(player,x,y,null);
-        locationx = x;
-        locationy = y;
+    public void setPosition(int locationx, int locationy){
+        this.locationx += locationx;
+        this.locationy += locationy;
+    }
+    public void render(Graphics2D g){
+            g.drawImage(player, locationx, locationy, 50, 50 ,null);
     }
 }
