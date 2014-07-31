@@ -1,5 +1,6 @@
 package com.bamgames.survivalatthedanceparty.gamestates;
 
+import  com.bamgames.survivalatthedanceparty.audio.MainMenu;
 import   com.bamgames.survivalatthedanceparty.main.GamePanel;
 import com.bamgames.survivalatthedanceparty.graphics.Background;
 import com.bamgames.survivalatthedanceparty.gamestates.SettingsState;
@@ -10,15 +11,11 @@ import java.awt.event.KeyEvent;
 
 public class MenuState{
     private Thread thread;
-    private int FPS = 60;
-    private int targetTime = FPS / 1000;
-    private long start;
-    private long completed;
-    private long waitTime;
     private int colorChooser;
     AboutState a;
     SettingsState s;
     GameState gs;
+    MainMenu q;
     private String[] title = {
        "S","u","r","v","i","v","a","l","a","t","t","h","e","D","a","n","c","e","P","a","r","t","y"
     };
@@ -34,17 +31,15 @@ public class MenuState{
 
     public MenuState(){
         b = new Background("/Backgrounds/tempbackground.jpg");
+        q = new MainMenu();
     }
     private void fancyTitle(Graphics2D g){
-        start = System.nanoTime();
         for(int i = 0; i < title.length; i++){
         changeColor(g);
         g.drawString(title[i], 200 + i * 15, 50);
         }
-        completed = System.nanoTime() - start;
-        waitTime = targetTime - waitTime / 1000000;
         try{
-          thread.sleep(waitTime);
+          thread.sleep(40);
         }catch(Exception e){
           e.printStackTrace();
         }

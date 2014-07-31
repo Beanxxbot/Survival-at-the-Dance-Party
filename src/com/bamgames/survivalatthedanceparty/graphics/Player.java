@@ -21,8 +21,20 @@ public class Player {
     public void setPosition(int locationx, int locationy){
         this.locationx += locationx;
         this.locationy += locationy;
+
+        //Boundaries
+        if(this.locationx >= 680){
+            this.locationx = 680;
+        }else if(this.locationx <= 0){
+            this.locationx = 0;
+        }
+        if(this.locationy >= 380){
+            this.locationy = 380;
+        }else if(this.locationy <= 0){
+            this.locationy = 0;
+        }
     }
     public void render(Graphics2D g){
-            g.drawImage(player, locationx, locationy, 50, 50 ,null);
+            g.drawImage(player, locationx, locationy, 20, 20,null);
     }
 }

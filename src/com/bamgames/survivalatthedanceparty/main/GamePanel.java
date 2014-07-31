@@ -1,9 +1,7 @@
 package com.bamgames.survivalatthedanceparty.main;
 
-import  com.bamgames.survivalatthedanceparty.gamestates.AboutState;
-import com.bamgames.survivalatthedanceparty.gamestates.MenuState;
-import com.bamgames.survivalatthedanceparty.gamestates.SettingsState;
-import com.bamgames.survivalatthedanceparty.gamestates.GameState;
+import com.bamgames.survivalatthedanceparty.gamestates.*;
+import com.bamgames.survivalatthedanceparty.graphics.SplashScreen;
 
 import javax.swing.JPanel;
 import java.awt.Dimension;
@@ -28,7 +26,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
     private boolean running = true;
     //
     //Temporary
-    private int targetFPS = 30;
+    private int targetFPS = 60;
     //
     private int targetTime = 1000 / targetFPS;
 
@@ -41,6 +39,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
     int x;
     int y;
 
+    //Initialize game after splash screen
+    int count;
+
     //GameManager
     public static int GSM;
 
@@ -49,6 +50,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
     AboutState a;
     SettingsState s;
     GameState gs;
+    OpeningState o;
 
     public GamePanel(){
         getPosition();
@@ -75,9 +77,10 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
         a = new AboutState();
         s = new SettingsState();
         gs = new GameState();
+        o = new OpeningState();
         paintbrush = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         g = (Graphics2D) paintbrush.getGraphics();
-        GSM = 0;
+        GSM = 4;
     }
     public void run(){
         initialize();
@@ -105,6 +108,14 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
                     gs.update();
                     gs.render(g);
                     break;
+                case 4:
+                    o.render(g);
+                    if(count >= 75) {
+                        GSM = 0;
+                    }else{
+                        count++;
+                    }
+                    break;
                 default:
                     System.out.println("Main GSM Error");
                     break;
@@ -117,7 +128,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
             }
             try{
                 thread.sleep(sleepTime);
-                System.out.println(sleepTime);
             }catch(Exception e){
                 e.printStackTrace();
             }
@@ -150,6 +160,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
             case 3:
                 gs.keyPressed(e.getKeyCode());
                 break;
+            case 4:
+                break;
             default:
             System.out.println("keyPressed GSM Error");
                 break;
@@ -167,6 +179,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
                 break;
             case 3:
                 gs.keyReleased(e.getKeyCode());
+                break;
+            case 4:
                 break;
             default:
                 System.out.println("keyReleased GSM Error");
@@ -190,6 +204,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
             case 3:
                 gs.mousePressed(e.getClickCount());
                 break;
+            case 4:
+                break;
             default:
                 System.out.println("mousePressed GSM Error");
                 break;
@@ -206,6 +222,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
             case 2:
                 break;
             case 3:
+                break;
+            case 4:
                 break;
             default:
                 System.out.println("mouseReleased GSM Error");
@@ -235,6 +253,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
                     break;
                 case 3:
                     gs.mouseMoved(e.getXOnScreen(), e.getYOnScreen());
+                    break;
+                case 4:
                     break;
                 default:
                     System.out.println("Mouse Moved GSM Error");
