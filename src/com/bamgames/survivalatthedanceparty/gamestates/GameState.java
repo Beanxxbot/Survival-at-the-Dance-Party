@@ -10,11 +10,14 @@ import java.security.Key;
 
 public class GameState{
     Player p;
+    Paused p2;
+    GamePanel GP;
     int movement;
     boolean isW;
     boolean isA;
     boolean isS;
     boolean isD;
+    public boolean isPaused;
 
     public GameState(){
         p = new Player("/Player/tempplayer.png");
@@ -23,11 +26,18 @@ public class GameState{
         isA = false;
         isS = false;
         isD = false;
+        isPaused = false;
     }
     public void update(){
 
     }
     public void render(Graphics2D g){
+        if(isPaused == true){
+            isPaused = false;
+            GP.shouldRepaint = true;
+            p2 = new Paused();
+            GP.GSM = 5;
+        }
             if (movement == 0) {
                 p.setPosition(0, 0);
                 p.render(g);
@@ -59,8 +69,11 @@ public class GameState{
             movement = 4;
             isD = true;
         }
-        //Add double movement will fix movement stopping glitch
-        //Add paused
+        //PAUSE STATE VERSION 1.0
+        if(k == KeyEvent.VK_ESCAPE){
+            isPaused = true;
+        }
+
     }
     public void keyReleased(int k) {
         if(k == KeyEvent.VK_W){

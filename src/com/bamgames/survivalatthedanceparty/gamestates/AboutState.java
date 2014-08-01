@@ -12,7 +12,7 @@ public class AboutState{
     int back = 0;
 
     String[] about = {
-    "Chief of Project: Sirawesomeknight","Programming: Beanxxbot"
+    "Developers: Sirawesomeknight Beanxxbot","Graphics: Jacknob"
     };
 
     //References

@@ -3,13 +3,13 @@ package com.bamgames.survivalatthedanceparty.audio;
 
 import javax.sound.sampled.*;
 
-public class MainMenu {
+public class MainMenu{
     private AudioInputStream audio;
     private AudioFormat format;
     private SourceDataLine line;
     private Clip clip;
     public MainMenu(){
-        //BEING FIXED
+        //WILL BE ADDRESSED LATER IN DEVELOPMENT
         //input();
         //createOutput();
         //checkDuration();
@@ -17,7 +17,7 @@ public class MainMenu {
     }
     public void input(){
     try{
-        String s = "/audio/hello.mp3";
+        String s = "/audio/hello.aiff";
                 //Possibly do .getResource()
         audio = AudioSystem.getAudioInputStream(getClass().getResourceAsStream(s));
         format = audio.getFormat();
