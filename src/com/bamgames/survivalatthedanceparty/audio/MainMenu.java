@@ -9,14 +9,15 @@ public class MainMenu {
     private SourceDataLine line;
     private Clip clip;
     public MainMenu(){
-        input();
-        createOutput();
-        checkDuration();
-        play();
+        //BEING FIXED
+        //input();
+        //createOutput();
+        //checkDuration();
+        //play();
     }
     public void input(){
     try{
-        String s = "/hello.mp3";
+        String s = "/audio/hello.mp3";
                 //Possibly do .getResource()
         audio = AudioSystem.getAudioInputStream(getClass().getResourceAsStream(s));
         format = audio.getFormat();
