@@ -20,7 +20,7 @@ public class GameState{
     public boolean isPaused;
 
     public GameState(){
-        p = new Player("/Player/tempplayer.png");
+        p = new Player("/Player/Stick");
         movement = 0;
         isW = false;
         isA = false;

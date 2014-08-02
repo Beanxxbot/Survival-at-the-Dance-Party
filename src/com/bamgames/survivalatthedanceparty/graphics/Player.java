@@ -1,18 +1,25 @@
 package com.bamgames.survivalatthedanceparty.graphics;
 
 
-import javax.imageio.ImageIO;
+import com.bamgames.survivalatthedanceparty.main.GamePanel;
+
+import  javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
+import java.io.IOException;
+import java.util.Timer;
+import javax.swing.ImageIcon;
 
 public class Player {
-    private BufferedImage player;
+    private BufferedImage[] player;
     public int locationx;
     public int locationy;
-    public Player(String s){
-        try{
-            player = ImageIO.read(getClass().getResourceAsStream(s));
-        }catch (Exception e){
+    public Player(String s) {
+        try {
+            player = new BufferedImage[]{
+                    ImageIO.read(getClass().getResourceAsStream(s+".png")),ImageIO.read(getClass().getResourceAsStream(s+"-2.png")),ImageIO.read(getClass().getResourceAsStream(s+"-3.png")),ImageIO.read(getClass().getResourceAsStream(s+"-4.png"))
+            };
+        }catch(Exception e){
             e.printStackTrace();
         }
         locationx = 0;
@@ -35,6 +42,9 @@ public class Player {
         }
     }
     public void render(Graphics2D g){
-            g.drawImage(player, locationx, locationy, 20, 20,null);
+        for(int i = 0; i < player.length; i++){
+            g.drawImage(player[i],locationx,locationy,25,25,null);
+            System.out.println(i);
+        }
     }
 }
