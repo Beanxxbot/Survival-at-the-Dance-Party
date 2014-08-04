@@ -59,19 +59,24 @@ public class GameState{
         if(k == KeyEvent.VK_W){
             movement = 1;
             isW = true;
+            p.isMove = true;
         }else if(k == KeyEvent.VK_A){
             movement = 2;
             isA = true;
+            p.isMove = true;
         }else if(k == KeyEvent.VK_S){
             movement = 3;
             isS = true;
+            p.isMove = true;
         }else if(k == KeyEvent.VK_D){
             movement = 4;
             isD = true;
+            p.isMove = true;
         }
         //PAUSE STATE VERSION 1.0
         if(k == KeyEvent.VK_ESCAPE){
             isPaused = true;
+            p.isMove = false;
         }
 
     }
@@ -88,6 +93,7 @@ public class GameState{
         if(k == KeyEvent.VK_W || k == KeyEvent.VK_S || k == KeyEvent.VK_A || k == KeyEvent.VK_D){
                if(isW == false && isA == false && isS == false && isD == false){
                    movement = 0;
+                   p.isMove = false;
                }
         }
     }
