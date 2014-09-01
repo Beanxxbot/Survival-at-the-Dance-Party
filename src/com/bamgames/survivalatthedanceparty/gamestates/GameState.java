@@ -23,7 +23,7 @@ public class GameState{
 
     public GameState(){
         p = new Player("/textures/player/player.png");
-        m = new MapBackground("/");
+        m = new MapBackground("/maps/SADP Map Draft.png");
         movement = 0;
         isW = false;
         isA = false;
@@ -41,6 +41,7 @@ public class GameState{
             p2 = new Paused();
             GP.GSM = 5;
         }
+        m.render(g);
             if (movement == 0) {
                 p.setPosition(0, 0);
                 p.render(g);
