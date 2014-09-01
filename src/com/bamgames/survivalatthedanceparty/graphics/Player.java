@@ -17,11 +17,11 @@ public class Player{
     public int locationy;
     private int count;
     public boolean isMove;
+    private boolean spritex;
+    private boolean spritey;
     public Player(String s) {
         try {
-            player = new BufferedImage[]{
-                    ImageIO.read(getClass().getResourceAsStream(s+".png")),ImageIO.read(getClass().getResourceAsStream(s+"-2.png")),ImageIO.read(getClass().getResourceAsStream(s+"-3.png")),ImageIO.read(getClass().getResourceAsStream(s+"-4.png"))
-            };
+            
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -49,10 +49,11 @@ public class Player{
     public void render(Graphics2D g){
         if(isMove){
             count++;
-        }else{
+        }else {
             count = 0;
         }
-        g.drawImage(player[count],locationx,locationy,25,25,null);
+        switch(count);
+        g.drawImage(player[count].getSubimage(0,0,256,256),locationx,locationy,25,25,null);
         if(count >= 3){
             count = 0;
         }
