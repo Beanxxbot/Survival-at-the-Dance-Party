@@ -140,7 +140,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
     }
     public void clearCheck(){
         if(shouldRepaint){
-            System.out.println("Hello");
         super.paintComponent(g);
         }
     }
