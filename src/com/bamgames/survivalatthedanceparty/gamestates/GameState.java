@@ -1,7 +1,8 @@
 package com.bamgames.survivalatthedanceparty.gamestates;
 
-import  com.bamgames.survivalatthedanceparty.graphics.Player;
+import   com.bamgames.survivalatthedanceparty.graphics.Player;
 import com.bamgames.survivalatthedanceparty.main.GamePanel;
+import com.bamgames.survivalatthedanceparty.graphics.MapBackground;
 
 import javax.swing.text.Keymap;
 import java.awt.event.KeyEvent;
@@ -12,6 +13,7 @@ public class GameState{
     Player p;
     Paused p2;
     GamePanel GP;
+    MapBackground m;
     int movement;
     boolean isW;
     boolean isA;
@@ -20,7 +22,8 @@ public class GameState{
     public boolean isPaused;
 
     public GameState(){
-        p = new Player("/Player/Stick");
+        p = new Player("/textures/player/player.png");
+        m = new MapBackground("/");
         movement = 0;
         isW = false;
         isA = false;

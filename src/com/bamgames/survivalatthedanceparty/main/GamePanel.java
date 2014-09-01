@@ -13,12 +13,12 @@ import java.awt.image.BufferedImage;
 public class GamePanel extends JPanel implements Runnable, KeyListener, MouseListener, MouseMotionListener{
     //Measurements
     //Will be adjusted
-    public final int width = 700;
+    public static final int width = 700;
     //
     //Will be adjusted
-    public final int height = 400;
+    public static final int height = 400;
     //
-    public final int scale = 2;
+    public static final int scale = 2;
 
     //Primary game function variables
     private Thread thread;

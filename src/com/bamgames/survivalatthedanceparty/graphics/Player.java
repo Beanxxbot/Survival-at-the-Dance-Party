@@ -12,22 +12,20 @@ import java.util.Timer;
 import java.awt.event.ActionEvent;
 
 public class Player{
-    private BufferedImage[] player;
+    private BufferedImage player;
     public int locationx;
     public int locationy;
-    private int count;
     public boolean isMove;
-    private boolean spritex;
-    private boolean spritey;
+    private int spritex = 0;
+    private int spritey = 0;
     public Player(String s) {
         try {
-            
+            player = ImageIO.read(getClass().getResourceAsStream(s));
         }catch(Exception e){
             e.printStackTrace();
         }
         locationx = 0;
         locationy = 0;
-        count = 0;
         isMove = false;
     }
     public void setPosition(int locationx, int locationy){
@@ -47,15 +45,14 @@ public class Player{
         }
     }
     public void render(Graphics2D g){
+        if(spritey == 768){
+            spritey = 0;
+        }
         if(isMove){
-            count++;
-        }else {
-            count = 0;
+            spritey += 256;
+        }else{
+            spritey = 0;
         }
-        switch(count);
-        g.drawImage(player[count].getSubimage(0,0,256,256),locationx,locationy,25,25,null);
-        if(count >= 3){
-            count = 0;
-        }
+            g.drawImage(player.getSubimage(spritex, spritey, 256, 256), locationx, locationy, 25, 25, null);
     }
 }
