@@ -15,6 +15,8 @@ public class Player{
     private BufferedImage player;
     public int locationx;
     public int locationy;
+    public static int blocx;
+    public static int blocy;
     public boolean isMove;
     private int spritex = 0;
     private int spritey = 0;
@@ -31,18 +33,11 @@ public class Player{
     public void setPosition(int locationx, int locationy){
         this.locationx += locationx;
         this.locationy += locationy;
-
+        blocx = this.locationx;
+        blocy = this.locationy;
         //Boundaries
-        if(this.locationx >= 675){
-            this.locationx = 675;
-        }else if(this.locationx <= 0){
-            this.locationx = 0;
-        }
-        if(this.locationy >= 375){
-            this.locationy = 375;
-        }else if(this.locationy <= 0){
-            this.locationy = 0;
-        }
+        //675 x
+        //375 y
     }
     public void render(Graphics2D g){
         if(spritey == 768){

@@ -41,8 +41,8 @@ public class GameState{
             p2 = new Paused();
             GP.GSM = 5;
         }
-        m.render(g);
-            if (movement == 0) {
+        m.dynamicRender(g);
+        if (movement == 0) {
                 p.setPosition(0, 0);
                 p.render(g);
             } else if (movement == 1) {
