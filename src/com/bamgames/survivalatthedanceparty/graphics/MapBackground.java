@@ -9,9 +9,11 @@ public class MapBackground {
     BufferedImage image;
     private int drawx;
     private int drawy;
+    private boolean area[];
     public MapBackground(String s){
         drawx = 0;
         drawy = 0;
+        area[0] = false;
         try{
             image = ImageIO.read(getClass().getResourceAsStream(s));
         }catch(Exception e){
@@ -19,8 +21,11 @@ public class MapBackground {
         }
     }
     public void dynamicRender(Graphics2D g){
-        if(p.blocx >= 675){
-            drawx += 700;
+        if(area[0] == false){
+            if(p.blocx >= 675){
+                drawx -= 300;
+                area[0] = true;
+            }
         }
         g.drawImage(image,drawx,drawy,null);
     }
