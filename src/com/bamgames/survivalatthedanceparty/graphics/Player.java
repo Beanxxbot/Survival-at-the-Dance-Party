@@ -1,7 +1,7 @@
 package com.bamgames.survivalatthedanceparty.graphics;
 
 
-import  com.bamgames.survivalatthedanceparty.main.GamePanel;
+import   com.bamgames.survivalatthedanceparty.graphics.MapBackground;
 
 import  javax.imageio.ImageIO;
 import java.awt.event.ActionListener;
@@ -12,6 +12,7 @@ import java.util.Timer;
 import java.awt.event.ActionEvent;
 
 public class Player{
+    MapBackground m;
     private BufferedImage player;
     public int locationx;
     public int locationy;
@@ -33,11 +34,50 @@ public class Player{
     public void setPosition(int locationx, int locationy){
         this.locationx += locationx;
         this.locationy += locationy;
+        if(m.change == 1){
+            this.locationx = 0;
+            m.change = 0;
+        }else if(m.change == 2){
+            this.locationx = 675;
+            m.change = 0;
+        }else if(m.change == 3){
+            this.locationy = 0;
+            m.change = 0;
+        }else if(m.change == 4){
+            this.locationy = 375;
+            m.change = 0;
+        }
+        if(m.parea == 0){
+            if(this.locationx < 0){
+                this.locationx = 0;
+            }
+            if(this.locationy < 0){
+                this.locationy = 0;
+            }
+        }else if(m.parea == 1){
+            if(this.locationx > 675){
+                this.locationx = 675;
+            }
+            if(this.locationy < 0){
+                this.locationy = 0;
+            }
+        }else if(m.parea == 2){
+            if(this.locationx < 0){
+                this.locationx = 0;
+            }
+            if(this.locationy > 375){
+                this.locationy = 0;
+            }
+        }else if(m.parea == 3){
+            if(this.locationx > 675){
+                this.locationx = 675;
+            }
+            if(this.locationy > 375){
+                this.locationy = 375;
+            }
+        }
         blocx = this.locationx;
         blocy = this.locationy;
-        //Boundaries
-        //675 x
-        //375 y
     }
     public void render(Graphics2D g){
         if(spritey == 768){
