@@ -48,15 +48,4 @@ public class SettingsState {
             selection();
         }
     }
-    public void mousePressed(int m){
-        if(m == 1){
-            System.out.println("Hello");
-            selection();
-        }
-    }
-    public void mouseMoved(int x, int y){
-        if(x >= 1236 && y >= 701 && x <= 1380 && y <= 746){
-            back = 1;
-        }
-    }
 }

@@ -101,10 +101,4 @@ public class GameState{
                }
         }
     }
-    public void mousePressed(int m){
-
-    }
-    public void mouseMoved(int x, int y){
-
-    }
 }

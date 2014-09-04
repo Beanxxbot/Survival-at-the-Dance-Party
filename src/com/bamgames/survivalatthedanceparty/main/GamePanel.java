@@ -10,7 +10,7 @@ import java.awt.Graphics2D;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
 
-public class GamePanel extends JPanel implements Runnable, KeyListener, MouseListener, MouseMotionListener{
+public class GamePanel extends JPanel implements Runnable, KeyListener{
     //Measurements
     //Will be adjusted
     public static final int width = 700;
@@ -69,8 +69,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
         super.addNotify();
         thread = new Thread(this);
         addKeyListener(this);
-        addMouseListener(this);
-        addMouseMotionListener(this);
         thread.start();
     }
     private void initialize(){
@@ -195,87 +193,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
             default:
                 System.out.println("keyReleased GSM Error");
                 break;
-        }
-    }
-    public void mouseClicked(MouseEvent e) {
-
-    }
-    public void mousePressed(MouseEvent e) {
-        switch(GSM) {
-            case 0:
-                m.mousePressed(e.getClickCount());
-                break;
-            case 1:
-                a.mousePressed(e.getClickCount());
-                break;
-            case 2:
-                s.mousePressed(e.getClickCount());
-                break;
-            case 3:
-                gs.mousePressed(e.getClickCount());
-                break;
-            case 4:
-                break;
-            case 5:
-                p.mousePressed(e.getClickCount());
-                break;
-            default:
-                System.out.println("mousePressed GSM Error");
-                break;
-        }
-    }
-    public void mouseReleased(MouseEvent e) {
-        switch(GSM) {
-            case 0:
-            m.mouseReleased(e.getClickCount());
-                break;
-            case 1:
-                a.mouseReleased(e.getClickCount());
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            default:
-                System.out.println("mouseReleased GSM Error");
-                break;
-        }
-    }
-    public void mouseEntered(MouseEvent e) {
-
-    }
-    public void mouseExited(MouseEvent e) {
-
-    }
-    public void mouseDragged(MouseEvent e) {
-
-    }
-    public void mouseMoved(MouseEvent e) {
-        if (e != null) {
-            switch (GSM) {
-                case 0:
-                    m.mouseMoved(e.getXOnScreen(), e.getYOnScreen());
-                    break;
-                case 1:
-                    a.mouseMoved(e.getXOnScreen(), e.getYOnScreen());
-                    break;
-                case 2:
-                    s.mouseMoved(e.getXOnScreen(), e.getYOnScreen());
-                    break;
-                case 3:
-                    gs.mouseMoved(e.getXOnScreen(), e.getYOnScreen());
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    p.mouseMoved(e.getXOnScreen(), e.getYOnScreen());
-                    break;
-                default:
-                    System.out.println("Mouse Moved GSM Error");
-                    break;
-            }
         }
     }
     }

@@ -58,17 +58,4 @@ public class AboutState{
     public void keyReleased(int k){
 
     }
-    public void mousePressed(int m){
-        if(m == 1){
-            selection();
-        }
-    }
-    public void mouseReleased(int m){
-
-    }
-    public void mouseMoved(int x, int y){
-        if(x <= 1418 && y >= 709 && x >= 1394 && y <= 742) {
-            back = 1;
-        }
-    }
 }

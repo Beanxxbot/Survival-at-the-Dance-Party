@@ -106,23 +106,4 @@ public class MenuState{
     public void keyReleased(int k){
 
     }
-    public void mousePressed(int m){
-        if(m == 1){
-            selection();
-        }
-    }
-    public void mouseReleased(int m){
-
-    }
-    public void mouseMoved(int x, int y){
-        if(x >= 606 && y <= 359 && x <= 743 && y >= 320){
-            currentChoice = 0;
-        }else if(x >= 605 && y <= 418 && x <= 836 && y >= 387){
-            currentChoice = 1;
-        }else if(x >= 600 && y <= 481 && x <= 777 && y >= 443){
-            currentChoice = 2;
-        }else if(x >= 606 && y <= 537 && x <= 724 && y >= 506){
-            currentChoice = 3;
-        }
-    }
 }

@@ -64,10 +64,4 @@ public class Paused {
             selection();
         }
     }
-    public void mousePressed(int m){
-        //Will be coded after bug is fixed
-    }
-    public void mouseMoved(int x, int y){
-        //Will be coded after bug is fixed
-    }
 }
