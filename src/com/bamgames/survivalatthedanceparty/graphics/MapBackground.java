@@ -1,10 +1,13 @@
 package com.bamgames.survivalatthedanceparty.graphics;
 
 import  com.bamgames.survivalatthedanceparty.graphics.Player;
+import com.bamgames.survivalatthedanceparty.gamestates.GameState;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
 public class MapBackground {
+    GameState gs;
     Player p;
     BufferedImage image;
     private int drawx;
@@ -23,48 +26,66 @@ public class MapBackground {
         }
     }
     public void dynamicRender(Graphics2D g){
-        if(area == 0){
-            if(p.blocx > 675){
-                drawx -= 300;
-                area = 1;
-                change = 1;
-            }else if(p.blocy > 375){
-                drawy -= 600;
-                area = 2;
-                change = 3;
+        if(gs.mapmode == true) {
+            if (area == 0) {
+                if (p.blocx > 675) {
+                    for (int i = 0; i <= 9; i++) {
+                            drawx -= 30;
+                    }
+                    area = 1;
+                    change = 1;
+                } else if (p.blocy > 375) {
+                    for (int i = 0; i <= 9; i++) {
+                        drawy -= 60;
+                    }
+                    area = 2;
+                    change = 3;
+                }
+            } else if (area == 1) {
+                if (p.blocx < 0) {
+                    for (int i = 0; i <= 9; i++) {
+                        drawx += 30;
+                    }
+                    area = 0;
+                    change = 2;
+                } else if (p.blocy > 375) {
+                    for (int i = 0; i <= 9; i++) {
+                        drawy -= 60;
+                    }
+                    area = 3;
+                    change = 3;
+                }
+            } else if (area == 2) {
+                if (p.blocx > 675) {
+                    for (int i = 0; i <= 9; i++) {
+                        drawx -= 30;
+                    }
+                    area = 3;
+                    change = 1;
+                } else if (p.blocy < 0) {
+                    for (int i = 0; i <= 9; i++) {
+                        drawy += 60;
+                    }
+                    area = 0;
+                    change = 4;
+                }
+            } else if (area == 3) {
+                if (p.blocx < 0) {
+                    for (int i = 0; i <= 9; i++) {
+                        drawx += 30;
+                    }
+                    area = 2;
+                    change = 2;
+                } else if (p.blocy < 0) {
+                    for (int i = 0; i <= 9; i++) {
+                        drawy += 60;
+                    }
+                    area = 1;
+                    change = 4;
+                }
             }
-        }else if(area == 1){
-            if(p.blocx < 0){
-                drawx += 300;
-                area = 0;
-                change = 2;
-            }else if(p.blocy > 375){
-                drawy -= 600;
-                area = 3;
-                change = 3;
-            }
-        }else if(area == 2){
-            if(p.blocx > 675){
-                drawx -= 300;
-                area = 3;
-                change = 1;
-            }else if(p.blocy < 0){
-                drawy += 600;
-                area = 0;
-                change = 4;
-            }
-        }else if(area == 3){
-            if(p.blocx < 0){
-                drawx += 300;
-                area = 2;
-                change = 2;
-            }else if(p.blocy < 0){
-                drawy += 600;
-                area = 1;
-                change = 4;
-            }
+            parea = area;
+            g.drawImage(image, drawx, drawy, null);
         }
-        parea = area;
-        g.drawImage(image,drawx,drawy,null);
     }
 }

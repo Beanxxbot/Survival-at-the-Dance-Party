@@ -1,7 +1,8 @@
 package com.bamgames.survivalatthedanceparty.graphics;
 
 
-import   com.bamgames.survivalatthedanceparty.graphics.MapBackground;
+import  com.bamgames.survivalatthedanceparty.graphics.MapBackground;
+import com.bamgames.survivalatthedanceparty.gamestates.GameState;
 
 import  javax.imageio.ImageIO;
 import java.awt.event.ActionListener;
@@ -13,6 +14,7 @@ import java.awt.event.ActionEvent;
 
 public class Player{
     MapBackground m;
+    GameState gs;
     private BufferedImage player;
     public int locationx;
     public int locationy;
@@ -21,6 +23,8 @@ public class Player{
     public boolean isMove;
     private int spritex = 0;
     private int spritey = 0;
+    public int sizex = 25;
+    public int sizey = 25;
     public Player(String s) {
         try {
             player = ImageIO.read(getClass().getResourceAsStream(s));
@@ -34,46 +38,48 @@ public class Player{
     public void setPosition(int locationx, int locationy){
         this.locationx += locationx;
         this.locationy += locationy;
+        if(gs.mapmode == true){
         if(m.change == 1){
-            this.locationx = 0;
+            this.locationx = 1;
             m.change = 0;
         }else if(m.change == 2){
-            this.locationx = 675;
+            this.locationx = 674;
             m.change = 0;
         }else if(m.change == 3){
-            this.locationy = 0;
+            this.locationy = 1;
             m.change = 0;
         }else if(m.change == 4){
-            this.locationy = 375;
+            this.locationy = 374;
             m.change = 0;
         }
-        if(m.parea == 0){
-            if(this.locationx < 0){
-                this.locationx = 0;
-            }
-            if(this.locationy < 0){
-                this.locationy = 0;
-            }
-        }else if(m.parea == 1){
-            if(this.locationx > 675){
-                this.locationx = 675;
-            }
-            if(this.locationy < 0){
-                this.locationy = 0;
-            }
-        }else if(m.parea == 2){
-            if(this.locationx < 0){
-                this.locationx = 0;
-            }
-            if(this.locationy > 375){
-                this.locationy = 0;
-            }
-        }else if(m.parea == 3){
-            if(this.locationx > 675){
-                this.locationx = 675;
-            }
-            if(this.locationy > 375){
-                this.locationy = 375;
+            if (m.parea == 0) {
+                if (this.locationx < 0) {
+                    this.locationx = 0;
+                }
+                if (this.locationy < 0) {
+                    this.locationy = 0;
+                }
+            } else if (m.parea == 1) {
+                if (this.locationx > 675) {
+                    this.locationx = 675;
+                }
+                if (this.locationy < 0) {
+                    this.locationy = 0;
+                }
+            } else if (m.parea == 2) {
+                if (this.locationx < 0) {
+                    this.locationx = 0;
+                }
+                if (this.locationy > 375) {
+                    this.locationy = 0;
+                }
+            } else if (m.parea == 3) {
+                if (this.locationx > 675) {
+                    this.locationx = 675;
+                }
+                if (this.locationy > 375) {
+                    this.locationy = 375;
+                }
             }
         }
         blocx = this.locationx;
@@ -88,6 +94,6 @@ public class Player{
         }else{
             spritey = 0;
         }
-            g.drawImage(player.getSubimage(spritex, spritey, 256, 256), locationx, locationy, 25, 25, null);
+            g.drawImage(player.getSubimage(spritex, spritey, 256, 256), locationx, locationy, sizex, sizey, null);
     }
 }
