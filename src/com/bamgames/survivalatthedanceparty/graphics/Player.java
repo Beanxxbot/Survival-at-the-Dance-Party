@@ -25,6 +25,7 @@ public class Player{
     private int spritey = 0;
     public int sizex = 25;
     public int sizey = 25;
+    public boolean isJump = false;
     public Player(String s) {
         try {
             player = ImageIO.read(getClass().getResourceAsStream(s));
@@ -93,6 +94,11 @@ public class Player{
             spritey += 256;
         }else{
             spritey = 0;
+        }
+        if(isJump){
+
+        }else{
+
         }
             g.drawImage(player.getSubimage(spritex, spritey, 256, 256), locationx, locationy, sizex, sizey, null);
     }

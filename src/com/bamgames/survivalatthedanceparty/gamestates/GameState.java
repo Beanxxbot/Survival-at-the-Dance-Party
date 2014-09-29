@@ -27,11 +27,13 @@ public class GameState{
     public static boolean mapmode;
     IntroLevel IL;
     boolean shouldStart;
+    boolean isJumping;
+    public static int keySharing;
 
     public GameState(){
         p = new Player("/textures/player/player.png");
         m = new MapBackground("/maps/SADP Map Draft.png");
-        IL = new IntroLevel();
+        IL = new IntroLevel("/objects/HellDoor.png");
         movement = 0;
         isW = false;
         isA = false;
@@ -42,12 +44,13 @@ public class GameState{
         mapmode = false;
         speedx = 0;
         speedy = 0;
+        isJumping = false;
     }
     public void update(){
 
     }
-    public void jump(){
-        //Algorithm for jumping goes in here
+    public void jump(int x,int y,Graphics2D g){
+        //Doing later
     }
     public void render(Graphics2D g) {
         if (isPaused == true) {
@@ -58,7 +61,7 @@ public class GameState{
         }
         switch (gamestates) {
             case 0:
-                IL.update();
+                IL.update(p);
                 IL.render(g);
                 if (shouldStart == false) {
                     movement = 5;
@@ -101,8 +104,10 @@ public class GameState{
                 speedx = 0;
                 speedy = 0;
             }else if(movement == 1){
-                p.isMove = false;
-                jump();
+                int x = p.locationx;
+                int y = p.locationy;
+                p.isJump = true;
+                jump(x,y,g);
             }else if(movement == 2){
                 speedx = -6;
                 speedy = 0;
@@ -146,6 +151,7 @@ public class GameState{
             isPaused = true;
             p.isMove = false;
         }
+        keySharing = k;
     }
     public void keyReleased(int k) {
         if(k == KeyEvent.VK_W){
