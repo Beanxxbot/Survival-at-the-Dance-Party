@@ -25,10 +25,10 @@ public static int whichTwo = 1;
 public static int whichThree = 1;
 
 //question prompts
-public static String questionOneOne = "Why is hell like this?";
-public static String questionOneTwo = "Where can I meet the devil?";
+public static String questionOneOne = "Why is Hell like this?";
+public static String questionOneTwo = "Where can I meet 'The Devil'?";
 public static String questionOneThree = "Can I go now?";
-public static String questionTwoOne = "Why am I in hell?";
+public static String questionTwoOne = "Why am I in Hell?";
 public static String questionTwoTwo = "Where can I go to find Mone?";
 
 //question prompt that appears to user
@@ -84,7 +84,7 @@ public static boolean exceptionQuestionAsked = false;
         if(question.equals("1") && !oneAsked)
         {
             if(isSecondaryOne){
-                playerSpeak("Where can I meet the devil?");
+                playerSpeak(QuestionOneTwo);
                 wizardSpeak("AHAHAHAHAHAHAHA!!!!!! You can't you have to be summoned! Good luck trying to be summoned!");
                 isSecondaryOne = false;
                 isTertiaryOne = true;
