@@ -12,7 +12,7 @@ public class AreaTwentyDialog {
         playerSpeak("Good to see you Door Guard!");
         guardSpeak("Save it. You are becoming a serious threat "+ name +".");
         playerSpeak("That's great!");
-        guardSpeak("It's not. The Devil is concerned. You are toppling all of King Club's managers like dominos.");
+        guardSpeak("It's not. The Devil is concerned. You are toppling all of King Club's managers like dominoes.");
         playerSpeak("So what do you want me to do?");
         guardSpeak("I merely came to tell you to be on guard at all times. For good luck take this! If you need me for anything come get me in Heaven's Light. I'm setting up a shop there.");
         //Area 20 Finished
