@@ -2,6 +2,7 @@ package com.bamgames.survivalatthedanceparty.main;
 
 import com.bamgames.survivalatthedanceparty.gamestates.*;
 import com.bamgames.survivalatthedanceparty.graphics.SplashScreen;
+import com.bamgames.survivalatthedanceparty.levels.LevelBlueprint;
 
 import javax.swing.JPanel;
 import java.awt.Dimension;

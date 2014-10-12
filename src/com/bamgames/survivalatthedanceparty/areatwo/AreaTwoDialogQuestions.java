@@ -84,7 +84,7 @@ public static boolean exceptionQuestionAsked = false;
         if(question.equals("1") && !oneAsked)
         {
             if(isSecondaryOne){
-                playerSpeak(QuestionOneTwo);
+                playerSpeak(questionOneTwo);
                 wizardSpeak("AHAHAHAHAHAHAHA!!!!!! You can't you have to be summoned! Good luck trying to be summoned!");
                 isSecondaryOne = false;
                 isTertiaryOne = true;

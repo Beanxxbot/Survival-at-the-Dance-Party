@@ -1,30 +1,36 @@
 package com.bamgames.survivalatthedanceparty.levels;
 
-import  java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
-
-import com.bamgames.survivalatthedanceparty.graphics.Player;
 import com.bamgames.survivalatthedanceparty.gamestates.GameState;
+import com.bamgames.survivalatthedanceparty.graphics.Player;
 
 import javax.imageio.ImageIO;
+import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import java.awt.Graphics2D;
 
-
-public class IntroLevel {
-    private BufferedImage image;
-    private GameState gs;
+public class IntroLevel implements LevelBlueprint{
+    BufferedImage image;
+    boolean shouldEnter;
     public IntroLevel(String s){
         try{
             image = ImageIO.read(getClass().getResourceAsStream(s));
         }catch(Exception e){
             e.printStackTrace();
         }
+        shouldEnter = false;
+    }
+    public void keyReleased(GameState gs){
+
+    }
+    public void keyPressed(GameState gs){
+        if(gs.PkeySharing == KeyEvent.VK_ENTER && shouldEnter == true){
+            System.out.println("swag");
+        }
     }
     public void update(Player p){
     if(p.locationx >= 500 && p.locationx <= 550){
-        if(gs.keySharing == KeyEvent.VK_ENTER){
-            System.out.println("hello world!");
-        }
+        shouldEnter = true;
+        System.out.println("NICE!");
     }
     }
     public void render(Graphics2D g){

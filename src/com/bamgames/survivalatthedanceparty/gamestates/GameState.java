@@ -1,11 +1,11 @@
 package com.bamgames.survivalatthedanceparty.gamestates;
 
-import   com.bamgames.survivalatthedanceparty.graphics.Player;
+import    com.bamgames.survivalatthedanceparty.graphics.Player;
 import com.bamgames.survivalatthedanceparty.levels.IntroLevel;
+import com.bamgames.survivalatthedanceparty.levels.LevelBlueprint;
 import com.bamgames.survivalatthedanceparty.main.GamePanel;
 import com.bamgames.survivalatthedanceparty.graphics.MapBackground;
 
-import javax.swing.text.Keymap;
 import java.awt.event.KeyEvent;
 import java.awt.Graphics2D;
 import java.security.Key;
@@ -28,7 +28,8 @@ public class GameState{
     IntroLevel IL;
     boolean shouldStart;
     boolean isJumping;
-    public static int keySharing;
+    public static int RkeySharing;
+    public static int PkeySharing;
 
     public GameState(){
         p = new Player("/textures/player/player.png");
@@ -122,6 +123,7 @@ public class GameState{
         }
     }
     public void keyPressed(int k){
+        PkeySharing = k;
         if(k == KeyEvent.VK_W){
             movement = 1;
             isW = true;
@@ -151,9 +153,9 @@ public class GameState{
             isPaused = true;
             p.isMove = false;
         }
-        keySharing = k;
     }
     public void keyReleased(int k) {
+        RkeySharing = k;
         if(k == KeyEvent.VK_W){
             isW = false;
         }else if(k == KeyEvent.VK_A){

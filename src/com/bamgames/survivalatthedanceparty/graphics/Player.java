@@ -102,4 +102,5 @@ public class Player{
         }
             g.drawImage(player.getSubimage(spritex, spritey, 256, 256), locationx, locationy, sizex, sizey, null);
     }
+    public void update(){}
 }
