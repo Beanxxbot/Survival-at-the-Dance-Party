@@ -26,11 +26,11 @@ public class IntroLevel implements LevelBlueprint{
         if(gs.PkeySharing == KeyEvent.VK_ENTER && shouldEnter == true){
             System.out.println("swag");
         }
+        System.out.println("double check");
     }
     public void update(Player p){
     if(p.locationx >= 500 && p.locationx <= 550){
         shouldEnter = true;
-        System.out.println("NICE!");
     }
     }
     public void render(Graphics2D g){

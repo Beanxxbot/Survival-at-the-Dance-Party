@@ -64,6 +64,8 @@ public class GameState{
             case 0:
                 IL.update(p);
                 IL.render(g);
+                IL.keyPressed(this);
+                IL.keyReleased(this);
                 if (shouldStart == false) {
                     movement = 5;
                     mapmode = false;
