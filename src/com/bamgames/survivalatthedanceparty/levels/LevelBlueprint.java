@@ -10,6 +10,6 @@ import com.bamgames.survivalatthedanceparty.gamestates.GameState;
 public interface LevelBlueprint{
 public void render(Graphics2D g);
 public void update(Player p);
-public void keyPressed(GameState gs);
-public void keyReleased(GameState gs);
+public void keyPressed(int k);
+public void keyReleased(int k);
 }

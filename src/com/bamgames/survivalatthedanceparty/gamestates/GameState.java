@@ -28,8 +28,6 @@ public class GameState{
     IntroLevel IL;
     boolean shouldStart;
     boolean isJumping;
-    public static int RkeySharing;
-    public static int PkeySharing;
 
     public GameState(){
         p = new Player("/textures/player/player.png");
@@ -64,8 +62,6 @@ public class GameState{
             case 0:
                 IL.update(p);
                 IL.render(g);
-                IL.keyPressed(this);
-                IL.keyReleased(this);
                 if (shouldStart == false) {
                     movement = 5;
                     mapmode = false;
@@ -125,7 +121,6 @@ public class GameState{
         }
     }
     public void keyPressed(int k){
-        PkeySharing = k;
         if(k == KeyEvent.VK_W){
             movement = 1;
             isW = true;
@@ -150,6 +145,11 @@ public class GameState{
             //TEMPORARY
             mapmode = true;
         }
+        switch(gamestates){
+            case 0:
+                IL.keyPressed(k);
+                break;
+        }
         //PAUSE STATE VERSION 1.0
         if(k == KeyEvent.VK_ESCAPE){
             isPaused = true;
@@ -157,7 +157,6 @@ public class GameState{
         }
     }
     public void keyReleased(int k) {
-        RkeySharing = k;
         if(k == KeyEvent.VK_W){
             isW = false;
         }else if(k == KeyEvent.VK_A){
@@ -166,6 +165,11 @@ public class GameState{
             isS = false;
         }else if(k == KeyEvent.VK_D){
             isD = false;
+        }
+        switch(gamestates){
+            case 0:
+                IL.keyReleased(k);
+                break;
         }
         if(k == KeyEvent.VK_W || k == KeyEvent.VK_S || k == KeyEvent.VK_A || k == KeyEvent.VK_D){
                if(isW == false && isA == false && isS == false && isD == false){

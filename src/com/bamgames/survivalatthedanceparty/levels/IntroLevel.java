@@ -19,15 +19,17 @@ public class IntroLevel implements LevelBlueprint{
         }
         shouldEnter = false;
     }
-    public void keyReleased(GameState gs){
+    public void keyReleased(int k){
 
     }
-    public void keyPressed(GameState gs){
-        if(gs.PkeySharing == KeyEvent.VK_ENTER && shouldEnter == true){
+    public void keyPressed(int k){
+        if(k == KeyEvent.VK_ENTER && shouldEnter == true){
             System.out.println("swag");
         }
-        System.out.println("double check");
+        System.out.println(k);
+        System.out.println(shouldEnter);
     }
+
     public void update(Player p){
     if(p.locationx >= 500 && p.locationx <= 550){
         shouldEnter = true;
