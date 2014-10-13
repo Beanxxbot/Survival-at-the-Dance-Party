@@ -106,7 +106,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
                     s.render(g);
                     break;
                 case 3:
-                    gs.update();
+                    //gs.update
                     gs.render(g);
                     break;
                 case 4:

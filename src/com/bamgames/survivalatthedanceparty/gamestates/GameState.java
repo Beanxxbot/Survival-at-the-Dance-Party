@@ -1,16 +1,17 @@
 package com.bamgames.survivalatthedanceparty.gamestates;
 
-import    com.bamgames.survivalatthedanceparty.graphics.Player;
+import com.bamgames.survivalatthedanceparty.graphics.Player;
 import com.bamgames.survivalatthedanceparty.levels.IntroLevel;
 import com.bamgames.survivalatthedanceparty.levels.LevelBlueprint;
 import com.bamgames.survivalatthedanceparty.main.GamePanel;
 import com.bamgames.survivalatthedanceparty.graphics.MapBackground;
+import com.bamgames.survivalatthedanceparty.levels.OpeningParty;
 
 import java.awt.event.KeyEvent;
 import java.awt.Graphics2D;
 import java.security.Key;
 
-public class GameState{
+public class GameState implements LevelBlueprint{
     Player p;
     Paused p2;
     GamePanel GP;
@@ -21,18 +22,19 @@ public class GameState{
     boolean isS;
     boolean isD;
     public boolean isPaused;
-    int gamestates = 0;
     public int speedx;
     public int speedy;
+    public static int gamestates;
     public static boolean mapmode;
     IntroLevel IL;
+    OpeningParty OP;
     boolean shouldStart;
     boolean isJumping;
 
     public GameState(){
         p = new Player("/textures/player/player.png");
         m = new MapBackground("/maps/SADP Map Draft.png");
-        IL = new IntroLevel("/objects/HellDoor.png");
+        IL = new IntroLevel("/objects/HellDoor.png","/entities/DoorGuard.png");
         movement = 0;
         isW = false;
         isA = false;
@@ -45,7 +47,7 @@ public class GameState{
         speedy = 0;
         isJumping = false;
     }
-    public void update(){
+    public void update(Player p){
 
     }
     public void jump(int x,int y,Graphics2D g){
@@ -72,6 +74,9 @@ public class GameState{
                     p.setPosition(0,0);
                     p.render(g);
                 }
+                break;
+            case 1:
+
                 break;
             default:
                 System.out.println("Game States Error");
@@ -156,6 +161,9 @@ public class GameState{
             p.isMove = false;
         }
     }
+    public void getInventory(){
+
+    }
     public void keyReleased(int k) {
         if(k == KeyEvent.VK_W){
             isW = false;
@@ -177,5 +185,8 @@ public class GameState{
                    p.isMove = false;
                }
         }
+    }
+    public static void changeState(int g){
+    gamestates = g;
     }
 }

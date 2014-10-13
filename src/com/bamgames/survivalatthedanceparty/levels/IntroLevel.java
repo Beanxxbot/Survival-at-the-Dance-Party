@@ -11,9 +11,10 @@ import java.awt.Graphics2D;
 public class IntroLevel implements LevelBlueprint{
     BufferedImage image;
     boolean shouldEnter;
-    public IntroLevel(String s){
+    GameState gs;
+    public IntroLevel(String door,String doorg){
         try{
-            image = ImageIO.read(getClass().getResourceAsStream(s));
+            image = ImageIO.read(getClass().getResourceAsStream(door));
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -24,15 +25,21 @@ public class IntroLevel implements LevelBlueprint{
     }
     public void keyPressed(int k){
         if(k == KeyEvent.VK_ENTER && shouldEnter == true){
-            System.out.println("swag");
+        gs.changeState(1);
         }
-        System.out.println(k);
-        System.out.println(shouldEnter);
     }
 
+    public void getInventory(){
+
+    }
     public void update(Player p){
     if(p.locationx >= 500 && p.locationx <= 550){
         shouldEnter = true;
+    }
+    if(p.locationx <= 0){
+        p.locationx = 0;
+    }else if(p.locationx >= 650){
+        p.locationx = 650;
     }
     }
     public void render(Graphics2D g){

@@ -5,9 +5,11 @@ import   com.bamgames.survivalatthedanceparty.main.GamePanel;
 import com.bamgames.survivalatthedanceparty.graphics.Background;
 import com.bamgames.survivalatthedanceparty.gamestates.SettingsState;
 import com.bamgames.survivalatthedanceparty.gamestates.GameState;
+import javazoom.jl.player.advanced.AdvancedPlayer;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.FileInputStream;
 
 public class MenuState{
     private Thread thread;
@@ -15,7 +17,6 @@ public class MenuState{
     AboutState a;
     SettingsState s;
     GameState gs;
-    MainMenu q;
     private String[] title = {
        "S","u","r","v","i","v","a","l","a","t","t","h","e","D","a","n","c","e","P","a","r","t","y"
     };
@@ -31,7 +32,7 @@ public class MenuState{
 
     public MenuState(){
         b = new Background("/Backgrounds/tempbackground.jpg");
-        q = new MainMenu();
+        (new Thread(new MainMenu())).start();
     }
     private void fancyTitle(Graphics2D g){
         for(int i = 0; i < title.length; i++){
@@ -69,6 +70,9 @@ public class MenuState{
         }
     }
     public void update(){
+
+    }
+    public void playMusic(){
 
     }
     public void render(Graphics2D g){

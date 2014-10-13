@@ -12,4 +12,5 @@ public void render(Graphics2D g);
 public void update(Player p);
 public void keyPressed(int k);
 public void keyReleased(int k);
+public void getInventory();
 }
