@@ -1,6 +1,7 @@
 package com.bamgames.survivalatthedanceparty.gamestates;
 
 import  com.bamgames.survivalatthedanceparty.audio.MainMenu;
+import com.bamgames.survivalatthedanceparty.audio.PauseAudio;
 import   com.bamgames.survivalatthedanceparty.main.GamePanel;
 import com.bamgames.survivalatthedanceparty.graphics.Background;
 import com.bamgames.survivalatthedanceparty.gamestates.SettingsState;
@@ -17,6 +18,8 @@ public class MenuState{
     AboutState a;
     SettingsState s;
     GameState gs;
+    Thread thread2;
+    public static Thread pausethread;
     private String[] title = {
        "S","u","r","v","i","v","a","l","a","t","t","h","e","D","a","n","c","e","P","a","r","t","y"
     };
@@ -32,7 +35,11 @@ public class MenuState{
 
     public MenuState(){
         b = new Background("/Backgrounds/tempbackground.jpg");
-        (new Thread(new MainMenu())).start();
+        thread2 = new Thread(new MainMenu());
+        thread2.start();
+        pausethread = new Thread(new PauseAudio());
+        PauseAudio.pause(false);
+        pausethread.start();
     }
     private void fancyTitle(Graphics2D g){
         for(int i = 0; i < title.length; i++){

@@ -33,8 +33,10 @@ public class IntroLevel implements LevelBlueprint{
 
     }
     public void update(Player p){
-    if(p.locationx >= 500 && p.locationx <= 550){
+    if(p.locationx >= 475 && p.locationx <= 575){
         shouldEnter = true;
+    }else{
+        shouldEnter = false;
     }
     if(p.locationx <= 0){
         p.locationx = 0;

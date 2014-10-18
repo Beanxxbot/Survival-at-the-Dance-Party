@@ -2,13 +2,12 @@ package com.bamgames.survivalatthedanceparty.gamestates;
 
 
 import com.bamgames.survivalatthedanceparty.graphics.Background;
-import com.bamgames.survivalatthedanceparty.gamestates.MenuState;
 import com.bamgames.survivalatthedanceparty.main.GamePanel;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class SettingsState {
+public class SettingsState{
     Background b;
     int back;
     MenuState m;
@@ -32,6 +31,8 @@ public class SettingsState {
             g.setColor(Color.RED);
             g.drawString("Back", 525, 350);
         }
+        g.setColor(Color.RED);
+        g.fillRect(50, 100, 600, 30);
     }
     private void selection(){
         if(back == 1){
