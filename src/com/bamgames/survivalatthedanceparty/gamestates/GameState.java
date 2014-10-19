@@ -1,7 +1,6 @@
 package com.bamgames.survivalatthedanceparty.gamestates;
 
 import com.bamgames.survivalatthedanceparty.audio.MainMenu;
-import com.bamgames.survivalatthedanceparty.audio.PauseAudio;
 import com.bamgames.survivalatthedanceparty.graphics.Player;
 import com.bamgames.survivalatthedanceparty.levels.IntroLevel;
 import com.bamgames.survivalatthedanceparty.levels.LevelBlueprint;
@@ -11,7 +10,6 @@ import com.bamgames.survivalatthedanceparty.levels.OpeningParty;
 
 import java.awt.event.KeyEvent;
 import java.awt.Graphics2D;
-import java.security.Key;
 
 public class GameState implements LevelBlueprint{
     Player p;
@@ -67,8 +65,8 @@ public class GameState implements LevelBlueprint{
             case 0:
                 IL.update(p);
                 IL.render(g);
-                if (shouldStart == false) {
-                    PauseAudio.pause(true);
+                MainMenu.pause();
+                if (shouldStart == false){
                     movement = 5;
                     mapmode = false;
                     p.locationx = 20;

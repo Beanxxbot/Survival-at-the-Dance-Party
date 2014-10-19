@@ -26,4 +26,7 @@ public class MainMenu implements Runnable{
         System.out.println(random);
         return selection[random];
     }
+    public static void pause(){
+    player.close();
+    }
 }
