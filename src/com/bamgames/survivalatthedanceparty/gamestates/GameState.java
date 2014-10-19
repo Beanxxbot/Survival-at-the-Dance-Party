@@ -65,7 +65,6 @@ public class GameState implements LevelBlueprint{
             case 0:
                 IL.update(p);
                 IL.render(g);
-                MainMenu.pause();
                 if (shouldStart == false){
                     movement = 5;
                     mapmode = false;

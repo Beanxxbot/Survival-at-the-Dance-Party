@@ -1,6 +1,7 @@
 package com.bamgames.survivalatthedanceparty.gamestates;
 
 
+import com.bamgames.survivalatthedanceparty.audio.MainMenu;
 import com.bamgames.survivalatthedanceparty.graphics.Background;
 import com.bamgames.survivalatthedanceparty.main.GamePanel;
 
@@ -12,10 +13,14 @@ public class SettingsState{
     int back;
     MenuState m;
     GamePanel GP;
+    int volume;
 
     public SettingsState(){
         b = new Background("/Backgrounds/tempbackground.jpg");
         back = 0;
+        //650 = 100% volume
+        //50 = Mute
+        volume = 650;
     }
     public void update(){
 
@@ -33,6 +38,8 @@ public class SettingsState{
         }
         g.setColor(Color.RED);
         g.fillRect(50, 100, 600, 30);
+        g.setColor(Color.GRAY);
+        g.fillRect(volume,90,30,50);
     }
     private void selection(){
         if(back == 1){
@@ -47,6 +54,19 @@ public class SettingsState{
         }
         if(k == KeyEvent.VK_ENTER){
             selection();
+        }
+    }
+
+    public void mouseMoved(int x, int y, boolean mouseState) {
+        if(mouseState == true){
+            if(x >= 50 && x <= 650 && y >= 90 && y <= 140){
+                volume = x;
+                if(x == 50){
+                    GP.shouldMute();
+                }
+            }
+        }else{
+
         }
     }
 }

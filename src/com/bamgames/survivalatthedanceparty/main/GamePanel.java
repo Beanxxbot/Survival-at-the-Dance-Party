@@ -1,17 +1,21 @@
 package com.bamgames.survivalatthedanceparty.main;
 
+import com.bamgames.survivalatthedanceparty.audio.MainMenu;
 import com.bamgames.survivalatthedanceparty.gamestates.*;
 import com.bamgames.survivalatthedanceparty.graphics.SplashScreen;
 import com.bamgames.survivalatthedanceparty.levels.LevelBlueprint;
+import com.sun.glass.events.*;
 
 import javax.swing.JPanel;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
-public class GamePanel extends JPanel implements Runnable, KeyListener{
+public class GamePanel extends JPanel implements Runnable, KeyListener, MouseListener, MouseMotionListener{
     //Measurements
     //Will be adjusted
     public static final int width = 700;
@@ -23,6 +27,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
     //Primary game function variables
     private Thread thread;
+    private Thread thread2;
     //Temporary
     private boolean running = true;
     //
@@ -53,6 +58,10 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     GameState gs;
     OpeningState o;
     Paused p;
+    MainMenu mm;
+
+    boolean mouseState;
+
 
     public GamePanel(){
         getPosition();
@@ -70,6 +79,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
         super.addNotify();
         thread = new Thread(this);
         addKeyListener(this);
+        addMouseMotionListener(this);
+        addMouseListener(this);
         thread.start();
     }
     private void initialize(){
@@ -79,6 +90,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
         gs = new GameState();
         o = new OpeningState();
         p = new Paused();
+        mm = new MainMenu();
+        thread2 = new Thread(mm);
+        thread2.start();
         paintbrush = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         g = (Graphics2D) paintbrush.getGraphics();
         GSM = 4;
@@ -108,6 +122,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
                 case 3:
                     //gs.update
                     gs.render(g);
+                    mm.pause();
                     break;
                 case 4:
                     o.render(g);
@@ -119,6 +134,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
                     break;
                 case 5:
                     p.render(g);
+                    mm.pause();
                     break;
                 default:
                     System.out.println("Main GSM Error");
@@ -196,4 +212,49 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
                 break;
         }
     }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+
     }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        mouseState = true;
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        mouseState = false;
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+        switch(GSM) {
+            case 2:
+                s.mouseMoved(e.getX(),e.getY(),mouseState);
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+    }
+
+    public void shouldMute() {
+        mm.pause();
+        mm.running = false;
+    }
+}

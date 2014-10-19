@@ -43,7 +43,6 @@ public class AboutState{
     private void selection(){
         if(back == 1){
             GP.shouldRepaint = true;
-            m = new MenuState();
             GP.GSM = 0;
         }
     }

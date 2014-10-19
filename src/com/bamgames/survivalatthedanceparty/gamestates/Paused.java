@@ -12,8 +12,6 @@ import com.bamgames.survivalatthedanceparty.main.GamePanel;
 public class Paused {
     int currentChoice;
     GamePanel GP;
-    GameState GS;
-    MenuState MS;
     String[] paused = {
         "Continue","Main Menu","Quit"
     };
@@ -36,11 +34,9 @@ public class Paused {
     public void selection(){
         if(currentChoice == 0){
             GP.shouldRepaint = true;
-            GS = new GameState();
             GP.GSM = 3;
         }else if(currentChoice == 1){
             GP.shouldRepaint = true;
-            MS = new MenuState();
             GP.GSM = 0;
         }else if(currentChoice == 2){
             System.exit(0);

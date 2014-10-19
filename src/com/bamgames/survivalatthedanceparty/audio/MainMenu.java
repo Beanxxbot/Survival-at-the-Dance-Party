@@ -8,8 +8,10 @@ import java.io.InputStream;
 
 public class MainMenu implements Runnable{
     InputStream music;
-    public static AdvancedPlayer player;
+    AdvancedPlayer player;
+    public boolean running = true;
     public void run(){
+        while(running) {
             try {
                 music = getClass().getResourceAsStream(DJCOMPUTER());
                 player = new AdvancedPlayer(music);
@@ -18,15 +20,15 @@ public class MainMenu implements Runnable{
                 e.printStackTrace();
             }
         }
+        }
     public String DJCOMPUTER(){
         String selection[] = {
-        "/audio/10-10.mp3","/audio/fireball.mp3","/audio/greenhillzone.mp3"
+                "/audio/10-10.mp3","/audio/fireball.mp3","/audio/greenhillzone.mp3"
         };
         int random = (int) (Math.random() * 3);
-        System.out.println(random);
         return selection[random];
     }
-    public static void pause(){
-    player.close();
+    public void pause(){
+         player.close();
     }
 }

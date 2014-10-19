@@ -30,8 +30,6 @@ public class MenuState{
 
     public MenuState(){
         b = new Background("/Backgrounds/tempbackground.jpg");
-        thread2 = new Thread(new MainMenu());
-        thread2.start();
     }
     private void fancyTitle(Graphics2D g){
         for(int i = 0; i < title.length; i++){
@@ -54,24 +52,18 @@ public class MenuState{
     private void selection(){
         if(currentChoice == 0){
             GP.shouldRepaint = true;
-            gs = new GameState();
             GP.GSM = 3;
         }else if(currentChoice == 1){
             GP.shouldRepaint = true;
-            s = new SettingsState();
             GP.GSM = 2;
         }else if(currentChoice == 2){
             GP.shouldRepaint = true;
-            a = new AboutState();
             GP.GSM = 1;
         }else if(currentChoice == 3){
             System.exit(0);
         }
     }
     public void update(){
-
-    }
-    public void playMusic(){
 
     }
     public void render(Graphics2D g){
