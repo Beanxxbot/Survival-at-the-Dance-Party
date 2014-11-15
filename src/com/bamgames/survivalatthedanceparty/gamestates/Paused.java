@@ -20,6 +20,7 @@ public class Paused {
     }
     public void render(Graphics2D g){
         g.setColor(Color.RED);
+        g.setFont(new Font("Gill Sans", Font.ITALIC + Font.BOLD, 30));
         g.drawString("PAUSED",50,50);
         for(int i = 0; i < paused.length; i++){
             if(i == currentChoice) {

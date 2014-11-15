@@ -15,7 +15,7 @@ public class AreaOneDialog
     {
         System.out.println("???: Hey! Hey you!");
         System.out.println("???: Yeah yeah, over here! By the door marked 'hell'!");
-        System.out.println("???: Hello, my name is... well, call me Guard");
+        System.out.println("???: Hello, my name is... well, call me Guard.");
         guardSpeak("Hello. Welcome to Hell.");
         guardSpeak("For registration purposes I need to ask your name");
         guardSpeak("Ahh " + Reference.name + "...That's an ugly name!");

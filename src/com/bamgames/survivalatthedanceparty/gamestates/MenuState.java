@@ -10,11 +10,6 @@ import java.awt.event.KeyEvent;
 public class MenuState{
     private Thread thread;
     private int colorChooser;
-    AboutState a;
-    SettingsState s;
-    GameState gs;
-    Thread thread2;
-    public static Thread pausethread;
     private String[] title = {
        "S","u","r","v","i","v","a","l","a","t","t","h","e","D","a","n","c","e","P","a","r","t","y"
     };
@@ -67,8 +62,6 @@ public class MenuState{
 
     }
     public void render(Graphics2D g){
-        thread = new Thread();
-        thread.start();
         b.render(g);
         g.setColor(Color.RED);
         g.setFont(new Font("Gill Sans", Font.ITALIC + Font.BOLD, 30));

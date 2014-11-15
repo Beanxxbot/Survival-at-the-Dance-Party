@@ -2,9 +2,6 @@ package com.bamgames.survivalatthedanceparty.main;
 
 import com.bamgames.survivalatthedanceparty.audio.MainMenu;
 import com.bamgames.survivalatthedanceparty.gamestates.*;
-import com.bamgames.survivalatthedanceparty.graphics.SplashScreen;
-import com.bamgames.survivalatthedanceparty.levels.LevelBlueprint;
-import com.sun.glass.events.*;
 
 import javax.swing.JPanel;
 import java.awt.Dimension;
@@ -27,7 +24,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
 
     //Primary game function variables
     private Thread thread;
-    private Thread thread2;
+    public Thread thread2;
+    public static int music = 0;
+
     //Temporary
     private boolean running = true;
     //
@@ -62,6 +61,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
 
     boolean mouseState;
 
+    boolean runmusic;
 
     public GamePanel(){
         getPosition();
@@ -83,16 +83,24 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
         addMouseListener(this);
         thread.start();
     }
+    public void shouldMute() {
+        mm.pause();
+        mm.running = false;
+    }
     private void initialize(){
         m = new MenuState();
         a = new AboutState();
         s = new SettingsState();
-        gs = new GameState();
         o = new OpeningState();
         p = new Paused();
+        gs = new GameState();
         mm = new MainMenu();
+
+        runmusic = true;
+
         thread2 = new Thread(mm);
         thread2.start();
+
         paintbrush = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         g = (Graphics2D) paintbrush.getGraphics();
         GSM = 4;
@@ -110,19 +118,25 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
                 case 0:
                     m.update();
                     m.render(g);
+                    runmusic = true;
                     break;
                 case 1:
                     a.update();
                     a.render(g);
+                    runmusic = true;
                     break;
                 case 2:
                     s.update();
                     s.render(g);
+                    runmusic = true;
                     break;
                 case 3:
-                    //gs.update
+                    if(runmusic == true){
+                        mm.pause();
+                       runmusic = false;
+                    }
+                    gs.update();
                     gs.render(g);
-                    mm.pause();
                     break;
                 case 4:
                     o.render(g);
@@ -133,6 +147,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
                     }
                     break;
                 case 5:
+                    runmusic = true;
                     p.render(g);
                     mm.pause();
                     break;
@@ -201,7 +216,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
             case 2:
                 break;
             case 3:
-                gs.keyReleased(e.getKeyCode());
+            gs.keyReleased(e.getKeyCode());
                 break;
             case 4:
                 break;
@@ -251,10 +266,5 @@ public class GamePanel extends JPanel implements Runnable, KeyListener, MouseLis
 
     @Override
     public void mouseMoved(MouseEvent e) {
-    }
-
-    public void shouldMute() {
-        mm.pause();
-        mm.running = false;
     }
 }

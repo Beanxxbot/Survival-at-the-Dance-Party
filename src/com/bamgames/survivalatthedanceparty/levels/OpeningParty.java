@@ -1,9 +1,10 @@
 package com.bamgames.survivalatthedanceparty.levels;
 
 import com.bamgames.survivalatthedanceparty.graphics.Player;
-import javazoom.jl.player.advanced.*;
+
+import javax.imageio.ImageIO;
 import java.awt.*;
-import java.io.FileInputStream;
+import java.awt.image.BufferedImage;
 
 /**
  * Created by James Hulsizer on 10/12/2014.

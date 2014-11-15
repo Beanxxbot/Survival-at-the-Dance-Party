@@ -1,6 +1,5 @@
 package com.bamgames.survivalatthedanceparty.gamestates;
 
-import com.bamgames.survivalatthedanceparty.audio.MainMenu;
 import com.bamgames.survivalatthedanceparty.graphics.Player;
 import com.bamgames.survivalatthedanceparty.levels.IntroLevel;
 import com.bamgames.survivalatthedanceparty.levels.LevelBlueprint;
@@ -11,7 +10,7 @@ import com.bamgames.survivalatthedanceparty.levels.OpeningParty;
 import java.awt.event.KeyEvent;
 import java.awt.Graphics2D;
 
-public class GameState implements LevelBlueprint{
+public class GameState{
     Player p;
     Paused p2;
     GamePanel GP;
@@ -30,12 +29,11 @@ public class GameState implements LevelBlueprint{
     OpeningParty OP;
     boolean shouldStart;
     boolean isJumping;
-    boolean shouldPauseS;
+    int shouldLoad;
 
     public GameState(){
         p = new Player("/textures/player/player.png");
         m = new MapBackground("/maps/SADP Map Draft.png");
-        IL = new IntroLevel("/objects/HellDoor.png","/entities/DoorGuard.png");
         movement = 0;
         isW = false;
         isA = false;
@@ -47,9 +45,16 @@ public class GameState implements LevelBlueprint{
         speedx = 0;
         speedy = 0;
         isJumping = false;
+        shouldLoad = 0;
     }
-    public void update(Player p){
-
+    public void update(){
+        if(GP.GSM == 3){
+            shouldLoad++;
+        }
+        if(shouldLoad == 1){
+            IL = new IntroLevel("/objects/HellDoor.png", "/textures/doorguard/doorguard.png", "/objects/speechbub.png");
+            shouldLoad++;
+        }
     }
     public void jump(int x,int y,Graphics2D g){
         //Doing later
@@ -177,8 +182,8 @@ public class GameState implements LevelBlueprint{
         }
         switch(gamestates){
             case 0:
-                IL.keyReleased(k);
-                break;
+
+            break;
         }
         if(k == KeyEvent.VK_W || k == KeyEvent.VK_S || k == KeyEvent.VK_A || k == KeyEvent.VK_D){
                if(isW == false && isA == false && isS == false && isD == false){
