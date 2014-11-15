@@ -21,6 +21,7 @@ public class IntroLevel implements LevelBlueprint{
     int bubbleY;
     int sizex;
     int sizey;
+    boolean notDone;
     GameState gs;
     String[] dialog1 = {
             "Hey!","Hey You!"
@@ -33,6 +34,9 @@ public class IntroLevel implements LevelBlueprint{
     };
     String[] dialog4 = {
             "Welcome to Hell!"
+    };
+    String[] dialog5 = {
+            "For registration purposes","I need to ask your name."
     };
     public IntroLevel(String door,String doorg,String speechBPath){
         try{
@@ -85,11 +89,21 @@ public class IntroLevel implements LevelBlueprint{
         g.drawImage(doorguard,450,80,30,30,null);
         if(dialog == true){
             switch(dialogTime){
-
+                case 5:
+                g.setColor(Color.RED);
+                g.fillRect(200,250,300,100);
+                while(notDone == true){
+                    //check to see if button was clicked
+                    //draw form
+                    //make custom writing form
+                }
+                break;
             }
             g.drawImage(speechBubble,bubbleX,bubbleY,sizex,sizey,null);
             switch(dialogTime){
+                case 5:
 
+                break;
             }
         }else if(enddialog == true){
 
@@ -111,6 +125,10 @@ public class IntroLevel implements LevelBlueprint{
                 break;
                 case 3:
                     sizex = 120;
+                    sizey = 50;
+                break;
+                case 4:
+                    sizex = 170;
                     sizey = 50;
                 break;
             }
@@ -138,6 +156,11 @@ public class IntroLevel implements LevelBlueprint{
                         g.drawString(dialog4[i], bubbleX + 10, (bubbleY + 20) + i * 10);
                     }
                 break;
+                case 4:
+                    for (int i = 0; i < dialog5.length; i++) {
+                        g.drawString(dialog5[i], bubbleX + 17, (bubbleY + 15) + i * 10);
+                    }
+                break;
             }
         }
         //Draw Jump Graphics
@@ -154,6 +177,12 @@ public class IntroLevel implements LevelBlueprint{
             case 3:
                 dialog = false;
              break;
+            case 4:
+                dialog = false;
+             break;
+            case 5:
+                dialog = true;
+            break;
         }
     }
 }
