@@ -15,7 +15,7 @@ public class GameState{
     Paused p2;
     GamePanel GP;
     MapBackground m;
-    int movement;
+    public static int movement;
     boolean isW;
     boolean isA;
     boolean isS;
@@ -26,7 +26,6 @@ public class GameState{
     public static int gamestates;
     public static boolean mapmode;
     IntroLevel IL;
-    OpeningParty OP;
     boolean shouldStart;
     boolean isJumping;
     int shouldLoad;
