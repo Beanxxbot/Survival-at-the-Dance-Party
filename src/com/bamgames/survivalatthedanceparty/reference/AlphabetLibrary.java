@@ -120,6 +120,9 @@ public class AlphabetLibrary {
                 case 16:
                     isCap = true;
                     break;
+                case 32:
+                    name += " ";
+                    break;
                 default:
                     if (caps == true) {
                         ovrCap = true;
@@ -232,6 +235,12 @@ public class AlphabetLibrary {
                 case 90:
                     name += "Z";
                     isCap = false;
+                    break;
+                case 32:
+                    name += " ";
+                    break;
+                case 8:
+
                     break;
                 case 20:
                     if (caps == false) {

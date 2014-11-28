@@ -77,8 +77,7 @@ public class IntroLevel implements LevelBlueprint{
         if(notDone == true) {
             isOn = Toolkit.getDefaultToolkit().getLockingKeyState(KeyEvent.VK_CAPS_LOCK);
             name = (al.getName(k,name,isOn));
-            System.out.println(name);
-
+            System.out.println(k);
         }
         }
 
@@ -148,7 +147,11 @@ public class IntroLevel implements LevelBlueprint{
                     g.setColor(Color.RED);
                     g.fillRect(200,250,300,100);
                     g.setColor(Color.BLACK);
-                    g.drawString(name,220,230);
+                    g.setFont(new Font("Gill Sans", Font.ITALIC + Font.BOLD, 20));
+                    g.drawString("Please Enter Name:",220,280);
+                    g.setFont(new Font("Gill Sans", Font.ITALIC + Font.BOLD, 30));
+                    g.drawString(name,220,310);
+                    g.setFont(new Font("Gill Sans", Font.ITALIC + Font.BOLD, 10));
                 break;
                 case 5:
 
