@@ -8,6 +8,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
+//REDO BUBBLE SYSTEM HAVE TEXT IN BOX ALL THE TIME ON BOTTOM
 
 public class IntroLevel implements LevelBlueprint{
     BufferedImage doorHell;
@@ -26,7 +27,7 @@ public class IntroLevel implements LevelBlueprint{
     boolean isCap;
     boolean ovrCap;
     boolean isOn;
-    String name;
+    public String name;
     GameState gs;
     AlphabetLibrary al;
     String[] dialog1 = {
@@ -43,6 +44,12 @@ public class IntroLevel implements LevelBlueprint{
     };
     String[] dialog5 = {
             "For registration purposes","I need to ask your name."
+    };
+    String[] dialog6 = {
+            "","...what an ugly name!"
+    };
+    String[] dialog7 = {
+            "Why the hell am I in hell?"
     };
     public IntroLevel(String door,String doorg,String speechBPath){
         try{
@@ -76,8 +83,7 @@ public class IntroLevel implements LevelBlueprint{
         }
         if(notDone == true) {
             isOn = Toolkit.getDefaultToolkit().getLockingKeyState(KeyEvent.VK_CAPS_LOCK);
-            name = (al.getName(k,name,isOn));
-            System.out.println(k);
+            name = al.getName(k,name,isOn,10);
         }
         }
 
@@ -107,14 +113,17 @@ public class IntroLevel implements LevelBlueprint{
         g.drawImage(doorguard,450,80,30,30,null);
         if(dialog == true){
             switch(dialogTime){
-                case 5:
-
+                case 6:
+                    sizex = 170;
+                    sizey = 70;
                 break;
             }
             g.drawImage(speechBubble,bubbleX,bubbleY,sizex,sizey,null);
             switch(dialogTime){
-                case 5:
-
+                case 6:
+                    for (int i = 0; i < dialog7.length; i++) {
+                        g.drawString(dialog7[i], bubbleX + 17, (bubbleY + 15) + i * 10);
+                    }
                 break;
             }
         }else if(enddialog == true){
@@ -154,7 +163,8 @@ public class IntroLevel implements LevelBlueprint{
                     g.setFont(new Font("Gill Sans", Font.ITALIC + Font.BOLD, 10));
                 break;
                 case 5:
-
+                    sizex = 170;
+                    sizey = 50;
                 break;
             }
             bubbleX = (450 - sizex);
@@ -186,7 +196,16 @@ public class IntroLevel implements LevelBlueprint{
                         g.drawString(dialog5[i], bubbleX + 17, (bubbleY + 15) + i * 10);
                     }
                 break;
-            }
+                case 5:
+                    dialog6[0] = "Ah "+ name;
+                    for (int i = 0; i < dialog6.length; i++) {
+                        g.drawString(dialog6[i], bubbleX + 17, (bubbleY + 15) + i * 10);
+                    }
+                break;
+                case 6:
+
+                break;
+             }
         }
         //Draw Jump Graphics
     }
@@ -207,9 +226,10 @@ public class IntroLevel implements LevelBlueprint{
              break;
             case 5:
                 notDone = false;
+                dialog = false;
             break;
             case 6:
-
+                dialog = true;
             break;
         }
     }
