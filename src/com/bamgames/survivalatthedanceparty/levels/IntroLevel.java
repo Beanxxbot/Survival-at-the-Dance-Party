@@ -13,8 +13,9 @@ public class IntroLevel implements LevelBlueprint {
     BufferedImage doorHell;
     BufferedImage speechBubble;
     BufferedImage doorguard;
+    boolean wBox;
+    boolean nBox;
     boolean shouldEnter;
-    boolean notDone;
     boolean isCap;
     boolean isOn;
     public String name;
@@ -32,9 +33,12 @@ public class IntroLevel implements LevelBlueprint {
             e.printStackTrace();
         }
         shouldEnter = false;
+        dialogstate = 0;
         al = new AlphabetLibrary();
         name = "";
         uname = "???";
+        wBox = true;
+        nBox = false;
     }
 
     public void keyReleased(int k) {
@@ -50,7 +54,7 @@ public class IntroLevel implements LevelBlueprint {
         if (k == KeyEvent.VK_ENTER) {
             interact();
         }
-        if (notDone == true) {
+        if (nBox == true) {
             isOn = Toolkit.getDefaultToolkit().getLockingKeyState(KeyEvent.VK_CAPS_LOCK);
             name = al.getName(k, name, isOn, 10);
         }
@@ -74,21 +78,82 @@ public class IntroLevel implements LevelBlueprint {
     }
 
     public void playerdialog(Graphics2D g){
-
+        if(nBox == true && wBox == false){
+            if(dialogstate == 6){
+                nBox = false;
+            }
+            gs.movement = 0;
+            g.setFont(new Font("Gill Sans", Font.ITALIC + Font.BOLD, 25));
+            g.setColor(Color.RED);
+            g.fillRect(200,250,300,100);
+            g.setColor(Color.BLACK);
+            g.drawString("Please Enter Name:",215,280);
+            g.drawString(name,215,320);
+        }else if(wBox == false && nBox == false){
+            g.setColor(Color.RED);
+            g.drawRect(0, 300, 699, 99);
+            g.setColor(Color.BLACK);
+            g.fillRect(1, 301, 698, 98);
+            g.setColor(Color.WHITE);
+            g.fillRoundRect(10, 300, 30, 30, 100, 100);
+            g.setColor(Color.RED);
+            g.setFont(new Font("Gill Sans", Font.ITALIC + Font.BOLD, 20));
+            g.drawString(name, 45, 322);
+            switch(dialogstate){
+                case 6:
+                    g.drawString("What the heck happpend? Why did I end up in hell?",5,360);
+                break;
+                case 7:
+                    wBox = true;
+                break;
+                case 8:
+                    g.drawString("...",5,360);
+                    wBox = true;
+                break;
+            }
+        }
     }
 
     public void dguarddialog(Graphics2D g){
-        g.setColor(Color.RED);
-        g.drawRect(0,300,699,99);
-        g.setColor(Color.BLACK);
-        g.fillRect(1,301,698,98);
-        g.setColor(Color.WHITE);
-        g.fillRoundRect(10,300,30,30,100,100);
-        g.setColor(Color.RED);
-        g.setFont(new Font("Gill Sans", Font.ITALIC + Font.BOLD, 20));
-        g.drawString(uname,45,322);
-        if(dialogstate == 0){
-            g.drawString("Hey! Hey You!!!",5,360);
+        if(wBox == true) {
+            g.setColor(Color.RED);
+            g.drawRect(0, 300, 699, 99);
+            g.setColor(Color.BLACK);
+            g.fillRect(1, 301, 698, 98);
+            g.drawImage(doorguard, 10, 300, 30, 30, null);
+            g.setColor(Color.RED);
+            g.setFont(new Font("Gill Sans", Font.ITALIC + Font.BOLD, 20));
+            g.drawString(uname, 45, 322);
+            switch (dialogstate) {
+                case 0:
+                    g.drawString("Hey! Hey You!!!",5,360);
+                    break;
+                case 1:
+                    g.drawString("Yeah Yeah, over here! By the door marked hell!",5,360);
+                    break;
+                case 2:
+                    g.drawString("Hello my name is... well, call me guard.", 5, 360);
+                    uname = "Door Guard";
+                    break;
+                case 3:
+                    g.drawString("Anyways... Welcome to Hell!", 5, 360);
+                break;
+                case 4:
+                    g.drawString("For registration purposes I must ask your name.",5,360);
+                break;
+                case 5:
+                    wBox = false;
+                    nBox = true;
+                break;
+                case 7:
+                    g.drawString("No no no no no! You got it all wrong! It's not a bad thing to end up here.",5,360);
+                break;
+                case 8:
+                    wBox = false;
+                break;
+
+                //Display WASD Keys
+            }
         }
     }
     public void render(Graphics2D g) {
