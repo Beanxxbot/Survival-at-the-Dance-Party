@@ -58,7 +58,7 @@ public class IntroLevel implements LevelBlueprint {
             gs.changeState(1);
         }
         if (k == KeyEvent.VK_ENTER) {
-            if(dialogstate == 9){
+            if(dialogstate == 9 || dialogstate == 10){
 
             }else {
                 interact();
