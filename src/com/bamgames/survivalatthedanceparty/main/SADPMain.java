@@ -13,6 +13,7 @@ import com.bamgames.survivalatthedanceparty.areatwenty.AreaTwentyDialog;
 import com.bamgames.survivalatthedanceparty.areatwo.AreaTwoDialog;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.Scanner;
 
 public class SADPMain

@@ -24,8 +24,10 @@ public class AreaOneDialog
         playerSpeak("What do you mean!? Of course Hell is bad!");
         //Display picture of WASD keys
         debug("Display WASD Keys");
-        guardSpeak("Hahaha, well, walk over to me with the WASD keys and I'll show you");
+        guardSpeak("Hahaha, well, walk over to me with the AD keys and I'll show you");
         playerSpeak("Okay, I'm here.");
+        debug("Display W Keys");
+        guardSpeak("Try and jump up to me!");
         //Display picture of E key
         debug("Display E Key");
         guardSpeak("Good, good. Now use the 'E' Key to open the door");

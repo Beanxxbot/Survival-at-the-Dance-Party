@@ -11,23 +11,26 @@ import java.awt.image.BufferedImage;
 
 public class IntroLevel implements LevelBlueprint {
     BufferedImage doorHell;
-    BufferedImage speechBubble;
+    BufferedImage wasd;
     BufferedImage doorguard;
     boolean wBox;
     boolean nBox;
     boolean shouldEnter;
     boolean isCap;
     boolean isOn;
-    public String name;
+    boolean arrivedL;
+    String name;
     int dialogstate;
+    int ady;
+    int cwasd;
     String uname;
     GameState gs;
     AlphabetLibrary al;
 
-    public IntroLevel(String door, String doorg, String speechBPath) {
+    public IntroLevel(String door, String doorg, String swasd) {
         try {
             doorHell = ImageIO.read(getClass().getResourceAsStream(door));
-            speechBubble = ImageIO.read(getClass().getResourceAsStream(speechBPath));
+            wasd = ImageIO.read(getClass().getResourceAsStream(swasd));
             doorguard = ImageIO.read(getClass().getResourceAsStream(doorg));
         } catch (Exception e) {
             e.printStackTrace();
@@ -39,6 +42,9 @@ public class IntroLevel implements LevelBlueprint {
         uname = "???";
         wBox = true;
         nBox = false;
+        ady = 0;
+        arrivedL = false;
+        cwasd = 0;
     }
 
     public void keyReleased(int k) {
@@ -52,7 +58,11 @@ public class IntroLevel implements LevelBlueprint {
             gs.changeState(1);
         }
         if (k == KeyEvent.VK_ENTER) {
-            interact();
+            if(dialogstate == 9){
+
+            }else {
+                interact();
+            }
         }
         if (nBox == true) {
             isOn = Toolkit.getDefaultToolkit().getLockingKeyState(KeyEvent.VK_CAPS_LOCK);
@@ -75,9 +85,25 @@ public class IntroLevel implements LevelBlueprint {
         } else if (p.locationx >= 650) {
             p.locationx = 650;
         }
+        if(dialogstate == 9 && p.locationx >= 450){
+            arrivedL = true;
+        }
     }
 
-    public void playerdialog(Graphics2D g){
+    private void changeKeys(int i){
+        if(i == 1){
+            try{
+                wasd = ImageIO.read(getClass().getResourceAsStream("/objects/WASDAnim2.png"));
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }else if(i == 2){
+            //S WASD IMAGE GOES HERE
+        }else{
+
+        }
+    }
+    private void playerdialog(Graphics2D g){
         if(nBox == true && wBox == false){
             if(dialogstate == 6){
                 nBox = false;
@@ -101,20 +127,25 @@ public class IntroLevel implements LevelBlueprint {
             g.drawString(name, 45, 322);
             switch(dialogstate){
                 case 6:
-                    g.drawString("What the heck happpend? Why did I end up in hell?",5,360);
+                    g.drawString("What the heck happened? Why did I end up in hell?",5,360);
                 break;
                 case 7:
                     wBox = true;
                 break;
                 case 8:
                     g.drawString("...",5,360);
+                break;
+                case 9:
+                    wBox = true;
+                break;
+                case 10:
                     wBox = true;
                 break;
             }
         }
     }
 
-    public void dguarddialog(Graphics2D g){
+    private void dguarddialog(Graphics2D g){
         if(wBox == true) {
             g.setColor(Color.RED);
             g.drawRect(0, 300, 699, 99);
@@ -151,12 +182,40 @@ public class IntroLevel implements LevelBlueprint {
                 case 8:
                     wBox = false;
                 break;
-
-                //Display WASD Keys
+                case 9:
+                    g.drawString("Hahaha, well, walk over to me with the AD keys and I'll show you",5,360);
+                    g.drawImage(wasd.getSubimage(0,ady,120,120),340,50,100,100,null);
+                    if(ady >= 1080){
+                        ady = 0;
+                    }else{
+                        ady += 120;
+                    }
+                    if(arrivedL == true){
+                        ady = 0;
+                        interact();
+                    }
+                break;
+                case 10:
+                    g.drawString("Nice Job!",5,360);
+                    g.drawString("Now try and jump up to me!",5,380);
+                    changeKeys(1);
+                    g.drawImage(wasd.getSubimage(0,ady,120,120),340,50,100,100,null);
+                    if(ady >= 1080){
+                        ady = 0;
+                    }else{
+                        ady += 120;
+                    }
+                break;
             }
         }
     }
+
+    private void drawbackground(Graphics2D g){
+        g.setColor(Color.WHITE);
+        g.fillRect(0,0,700,400);
+    }
     public void render(Graphics2D g) {
+        drawbackground(g);
         g.drawImage(doorHell, 500, 130, 50, 70, null);
         g.drawImage(doorguard, 450, 80, 30, 30, null);
         playerdialog(g);

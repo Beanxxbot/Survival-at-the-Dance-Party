@@ -51,7 +51,7 @@ public class GameState{
             shouldLoad++;
         }
         if(shouldLoad == 1){
-            IL = new IntroLevel("/objects/HellDoor.png", "/textures/doorguard/doorguard.png", "/objects/speechbub.png");
+            IL = new IntroLevel("/objects/HellDoor.png", "/textures/doorguard/doorguard.png","/objects/WASDAnim.png");
             shouldLoad++;
         }
     }
