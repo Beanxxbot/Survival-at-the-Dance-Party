@@ -2,16 +2,14 @@ package com.bamgames.survivalatthedanceparty.gamestates;
 
 import com.bamgames.survivalatthedanceparty.graphics.Player;
 import com.bamgames.survivalatthedanceparty.levels.IntroLevel;
-import com.bamgames.survivalatthedanceparty.levels.LevelBlueprint;
 import com.bamgames.survivalatthedanceparty.main.GamePanel;
 import com.bamgames.survivalatthedanceparty.graphics.MapBackground;
-import com.bamgames.survivalatthedanceparty.levels.OpeningParty;
 
 import java.awt.event.KeyEvent;
 import java.awt.Graphics2D;
 
 public class GameState{
-    Player p;
+    public Player p;
     Paused p2;
     GamePanel GP;
     MapBackground m;
@@ -27,7 +25,6 @@ public class GameState{
     public static boolean mapmode;
     IntroLevel IL;
     boolean shouldStart;
-    boolean isJumping;
     int shouldLoad;
 
     public GameState(){
@@ -43,7 +40,6 @@ public class GameState{
         mapmode = false;
         speedx = 0;
         speedy = 0;
-        isJumping = false;
         shouldLoad = 0;
     }
     public void update(){
@@ -54,9 +50,6 @@ public class GameState{
             IL = new IntroLevel("/objects/HellDoor.png", "/textures/doorguard/doorguard.png","/objects/WASDAnim.png");
             shouldLoad++;
         }
-    }
-    public void jump(int x,int y,Graphics2D g){
-        //Doing later
     }
     public void render(Graphics2D g) {
         if (isPaused == true) {
@@ -112,19 +105,21 @@ public class GameState{
             if(movement == 0){
                 speedx = 0;
                 speedy = 0;
+                p.jump();
             }else if(movement == 1){
-                int x = p.locationx;
-                int y = p.locationy;
                 p.isJump = true;
-                jump(x,y,g);
+                p.jump();
             }else if(movement == 2){
                 speedx = -6;
                 speedy = 0;
+                p.jump();
             }else if(movement == 4){
                 speedx = 6;
                 speedy = 0;
+                p.jump();
             }else if(movement == 3){
                 p.isMove = false;
+                p.jump();
             }
             p.setPosition(speedx,speedy);
             p.render(g);
@@ -134,7 +129,6 @@ public class GameState{
         if(k == KeyEvent.VK_W){
             movement = 1;
             isW = true;
-            p.isMove = true;
             shouldStart = true;
         }else if(k == KeyEvent.VK_A){
             movement = 2;
@@ -172,6 +166,7 @@ public class GameState{
     public void keyReleased(int k) {
         if(k == KeyEvent.VK_W){
             isW = false;
+            p.isJump = false;
         }else if(k == KeyEvent.VK_A){
             isA = false;
         }else if(k == KeyEvent.VK_S){

@@ -19,6 +19,7 @@ public class IntroLevel implements LevelBlueprint {
     boolean isCap;
     boolean isOn;
     boolean arrivedL;
+    boolean isDone;
     String name;
     int dialogstate;
     int ady;
@@ -54,11 +55,11 @@ public class IntroLevel implements LevelBlueprint {
     }
 
     public void keyPressed(int k) {
-        if (k == KeyEvent.VK_ENTER && shouldEnter == true) {
+        if (k == KeyEvent.VK_ENTER && shouldEnter == true && isDone == true) {
             gs.changeState(1);
         }
         if (k == KeyEvent.VK_ENTER) {
-            if(dialogstate == 9 || dialogstate == 10){
+            if(dialogstate >= 9){
 
             }else {
                 interact();
@@ -85,7 +86,10 @@ public class IntroLevel implements LevelBlueprint {
         } else if (p.locationx >= 650) {
             p.locationx = 650;
         }
-        if(dialogstate == 9 && p.locationx >= 450){
+        if(dialogstate == 9 && p.locationx >= 435){
+            arrivedL = true;
+        }
+        if(dialogstate == 10 && p.locationy <= 80){
             arrivedL = true;
         }
     }
@@ -141,6 +145,9 @@ public class IntroLevel implements LevelBlueprint {
                 case 10:
                     wBox = true;
                 break;
+                case 11:
+                    wBox = true;
+                break;
             }
         }
     }
@@ -193,6 +200,7 @@ public class IntroLevel implements LevelBlueprint {
                     if(arrivedL == true){
                         ady = 0;
                         interact();
+                        arrivedL = false;
                     }
                 break;
                 case 10:
@@ -205,6 +213,18 @@ public class IntroLevel implements LevelBlueprint {
                     }else{
                         ady += 120;
                     }
+                    if(arrivedL == true){
+                        ady = 0;
+                        interact();
+                        arrivedL = false;
+                    }
+                break;
+                case 11:
+                    //CHANGE TO NEELING TUTORIAL
+                    g.drawString("Now you are getting it!",5,360);
+                    g.drawString("Let's get out of here and into hell! Press Enter to open the door.",5,380);
+                    //Add Animation
+                    isDone = true;
                 break;
             }
         }

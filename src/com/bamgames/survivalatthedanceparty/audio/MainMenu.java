@@ -1,7 +1,7 @@
 package com.bamgames.survivalatthedanceparty.audio;
 
 
-import com.bamgames.survivalatthedanceparty.main.GamePanel;
+import  com.bamgames.survivalatthedanceparty.main.GamePanel;
 import  javazoom.jl.player.advanced.AdvancedPlayer;
 
 import java.io.InputStream;

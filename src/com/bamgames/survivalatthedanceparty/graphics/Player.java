@@ -26,6 +26,8 @@ public class Player{
     public int sizex = 25;
     public int sizey = 25;
     public boolean isJump = false;
+    int timesRan;
+    boolean goDown;
     public Player(String s) {
         try {
             player = ImageIO.read(getClass().getResourceAsStream(s));
@@ -35,6 +37,31 @@ public class Player{
         locationx = 0;
         locationy = 0;
         isMove = false;
+    }
+    public void jump(){
+        if (isJump == true) {
+            if (timesRan >= 20) {
+                goDown = true;
+            } else if (timesRan <= 0) {
+                goDown = false;
+                timesRan = 0;
+                isJump = false;
+            }
+            if (goDown == true) {
+                setPosition(0, 6);
+                timesRan -= 1;
+            } else {
+                setPosition(0, -6);
+                timesRan += 1;
+            }
+        } else {
+            if (timesRan <= 0) {
+                timesRan = 0;
+            }else {
+                setPosition(0, 6);
+                timesRan -= 1;
+            }
+        }
     }
     public void setPosition(int locationx, int locationy){
         this.locationx += locationx;
