@@ -2,23 +2,25 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyListener;
 
 /**
  * Created by James on 2/13/2015.
  */
-public class SADPMain {
+public class SADPMain{
     public static void main(String args[]) {
         JFrame window = new JFrame("Survival at the Dance Party");
         GameManager GM = new GameManager();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setContentPane(GM);
-        window.setPreferredSize(new Dimension(1080,1020));
+        window.setPreferredSize(new Dimension(1750,1250));
         window.pack();
-        beginThreads(GM);
+        beginThread(GM);
         window.setVisible(true);
     }
-    public static void beginThreads(GameManager GM){
+    public static void beginThread(GameManager GM){
         GM.Primary = new Thread(GM);
+        GM.addKeyListener(GM);
         GM.Primary.start();
     }
 }
