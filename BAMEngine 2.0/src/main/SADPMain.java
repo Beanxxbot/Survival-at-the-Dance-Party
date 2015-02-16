@@ -10,18 +10,20 @@ import java.awt.event.KeyListener;
 public class SADPMain{
     public static void main(String args[]) {
         JFrame window = new JFrame("Survival at the Dance Party");
-        GameManager GM = new GameManager();
         mouse m = new mouse();
+        keyInput k = new keyInput();
+        GameManager GM = new GameManager(m,k);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setContentPane(GM);
-        window.setPreferredSize(new Dimension(1750,1250));
+        window.setPreferredSize(new Dimension(1366,768));
         window.pack();
-        beginThread(GM,m);
+        window.setResizable(false);
+        beginThread(GM,m,k);
         window.setVisible(true);
     }
-    public static void beginThread(GameManager GM, mouse m){
+    public static void beginThread(GameManager GM, mouse m, keyInput k){
         GM.Primary = new Thread(GM);
-        GM.addKeyListener(GM);
+        GM.addKeyListener(k);
         //POSSIBLY REQUIRES CUSTOM MOUSE ENGINE
         GM.addMouseListener(m);
         GM.addMouseMotionListener(m);

@@ -8,6 +8,14 @@ import java.awt.event.MouseMotionListener;
  * Created by James on 2/14/2015.
  */
 public class mouse implements MouseListener, MouseMotionListener {
+    private int GSM;
+    public mouse(){
+
+    }
+
+    public void update(GameManager GM){
+        GSM = GM.GSM;
+    }
 
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -41,6 +49,7 @@ public class mouse implements MouseListener, MouseMotionListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-
+        //System.out.println("X:" + e.getX());
+        //System.out.println("Y:" + e.getY());
     }
 }
