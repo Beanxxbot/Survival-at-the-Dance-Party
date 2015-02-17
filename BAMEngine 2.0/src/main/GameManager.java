@@ -1,5 +1,7 @@
 package main;
 
+import audio.audiosystem;
+import pregame.about;
 import pregame.mainmenu;
 import pregame.splashscreen;
 
@@ -19,10 +21,15 @@ public class GameManager extends JPanel implements Runnable {
     private BufferedImage paintbrush;
     private Graphics2D g;
     splashscreen ss;
+    audiosystem a;
     mainmenu mm;
+    about ab;
     int count;
     mouse m;
     keyInput I;
+    Thread audio;
+    int GSMA;
+    int GSMG;
 
     public GameManager(mouse M,keyInput Q){
         setFocusable(true);
@@ -34,12 +41,16 @@ public class GameManager extends JPanel implements Runnable {
     public void initialize() {
         running = true;
         GSM = 0;
+        GSMG = 0;
+        GSMA = 1;
         paintbrush = new BufferedImage(1366, 768, BufferedImage.TYPE_INT_RGB);
         g = (Graphics2D) paintbrush.getGraphics();
         ss = new splashscreen();
         mm = new mainmenu();
-        ss.initialize();
-        mm.initialize();
+        ab = new about();
+        a = new audiosystem();
+        audio = new Thread(a);
+        audio.start();
     }
 
     public void run() {
@@ -49,15 +60,18 @@ public class GameManager extends JPanel implements Runnable {
         long wait;
         while (running) {
             start = System.nanoTime();
+            repaint();
             I.update(this);
             m.update(this);
             switch (GSM) {
                 case 0:
+                    audiomanager();
                     ss.update(this);
                     ss.render(g);
                     count++;
                     if (count >= 100) {
                         GSM = 1;
+                        GSMG = 1;
                     }
                     break;
                 case 1:
@@ -68,16 +82,18 @@ public class GameManager extends JPanel implements Runnable {
                     //Settings Menu
                     break;
                 case 3:
-                    //Credits Menu
+                    ab.update(this);
+                    ab.render(g);
                     break;
                 case 4:
                     //Intro Level
                     break;
                 case 5:
-                    //1st Level
+                    audiomanager();
                     break;
                 default:
                     System.out.println("GSM ERROR");
+                    break;
             }
             drawToScreen();
             completed = System.nanoTime() - start;
@@ -95,6 +111,26 @@ public class GameManager extends JPanel implements Runnable {
         }
     }
 
+    public void repaint(){
+        if(GSMG != GSM){
+            GSMG = GSM;
+            super.paintComponent(g);
+        }
+    }
+    public void audiomanager(){
+            if (GSMA != GSM) {
+                GSMA = GSM;
+                switch (GSMA) {
+                    case 0:
+                        a.start("/audio/electricfeel.mp3");
+                        break;
+                    case 5:
+                        a.stop();
+                        a.start("/audio/greenhillzone.mp3");
+                        break;
+                }
+            }
+    }
     public void drawToScreen() {
         Graphics d = getGraphics();
         d.drawImage(paintbrush, 0, 0, 1366, 768, null);

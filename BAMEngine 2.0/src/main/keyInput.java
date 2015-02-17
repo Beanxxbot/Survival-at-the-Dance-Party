@@ -1,5 +1,6 @@
 package main;
 
+import pregame.about;
 import pregame.mainmenu;
 
 import java.awt.event.KeyEvent;
@@ -11,6 +12,7 @@ import java.awt.event.KeyListener;
 public class keyInput implements KeyListener{
     private int GSM;
     private mainmenu mm;
+    private about a;
     public keyInput(){
 
     }
@@ -18,6 +20,7 @@ public class keyInput implements KeyListener{
     public void update(GameManager GM){
         GSM = GM.GSM;
         mm = GM.mm;
+        a = GM.ab;
     }
 
     @Override
@@ -32,8 +35,13 @@ public class keyInput implements KeyListener{
 
                 break;
             case 1:
-                System.out.println("eh");
                 mm.keyPressed(e.getKeyCode());
+                break;
+            case 2:
+
+                break;
+            case 3:
+                a.keyPressed(e.getKeyCode());
                 break;
             default:
                 System.out.println("KeyPressed Error FROM KEYINPUTS");

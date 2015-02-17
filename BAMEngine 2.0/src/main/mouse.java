@@ -1,5 +1,7 @@
 package main;
 
+import pregame.mainmenu;
+
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -9,6 +11,8 @@ import java.awt.event.MouseMotionListener;
  */
 public class mouse implements MouseListener, MouseMotionListener {
     private int GSM;
+    private int x;
+    private int y;
     public mouse(){
 
     }
@@ -51,5 +55,8 @@ public class mouse implements MouseListener, MouseMotionListener {
     public void mouseMoved(MouseEvent e) {
         //System.out.println("X:" + e.getX());
         //System.out.println("Y:" + e.getY());
+        x = e.getX();
+        y = e.getY();
     }
 }
+

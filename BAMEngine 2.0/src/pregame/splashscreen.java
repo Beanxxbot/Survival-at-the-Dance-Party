@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
  */
 public class splashscreen{
     private BufferedImage splash;
-    public void initialize(){
+    public splashscreen(){
         try{
             splash = ImageIO.read(getClass().getResourceAsStream("/BAMLogo.png"));
         }catch(Exception e){
