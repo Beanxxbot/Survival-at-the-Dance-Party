@@ -15,11 +15,13 @@ public class about {
     BufferedImage discoback;
     BufferedImage title;
     BufferedImage content;
+    BufferedImage back;
     public about(){
         try{
             discoback = ImageIO.read(getClass().getResourceAsStream("/textures/objects/aboutdiscoman.png"));
             title = ImageIO.read(getClass().getResourceAsStream("/menutextures/about.png"));
             content = ImageIO.read(getClass().getResourceAsStream("/menutextures/abouttext.png"));
+            back = ImageIO.read(getClass().getResourceAsStream("/menutextures/back.png"));
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -37,6 +39,7 @@ public class about {
         g.drawImage(discoback,354,50,324,600,null);
         g.drawImage(title.getSubimage(300,0,300,100),694,25,300,100,null);
         g.drawImage(content,694,75,500,650,null);
+        g.drawImage(back,1116,628,225,100,null);
     }
     public void keyPressed(int k){
         if(k == KeyEvent.VK_ENTER){
