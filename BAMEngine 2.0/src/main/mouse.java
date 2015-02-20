@@ -1,6 +1,8 @@
 package main;
 
+import pregame.about;
 import pregame.mainmenu;
+import pregame.settings;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -13,12 +15,21 @@ public class mouse implements MouseListener, MouseMotionListener {
     private int GSM;
     private int x;
     private int y;
+    private int x2;
+    private int y2;
+    private mainmenu mm;
+    private about a;
+    private settings s;
+
     public mouse(){
 
     }
 
     public void update(GameManager GM){
         GSM = GM.GSM;
+        mm = GM.mm;
+        a = GM.ab;
+        s = GM.s;
     }
 
     @Override
@@ -28,7 +39,20 @@ public class mouse implements MouseListener, MouseMotionListener {
 
     @Override
     public void mousePressed(MouseEvent e) {
+        switch(GSM) {
+            case 0:
 
+                break;
+            case 1:
+                mm.mousePressed();
+                break;
+            case 2:
+                s.mousePressed();
+                break;
+            case 3:
+                a.mousePressed();
+                break;
+        }
     }
 
     @Override
@@ -48,15 +72,36 @@ public class mouse implements MouseListener, MouseMotionListener {
 
     @Override
     public void mouseDragged(MouseEvent e) {
-
+        x2 = e.getX();
+        y2 = e.getY();
+        switch(GSM){
+            case 2:
+                s.mouseDragged(x2,y2);
+                break;
+        }
     }
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        //System.out.println("X:" + e.getX());
-        //System.out.println("Y:" + e.getY());
+        System.out.println("X:" + e.getX());
+        System.out.println("Y:" + e.getY());
         x = e.getX();
         y = e.getY();
+        switch(GSM){
+            case 0:
+
+                break;
+            case 1:
+                mm.mouseMoved(x,y);
+                break;
+            case 2:
+                s.mouseMoved(x,y);
+                break;
+            case 3:
+                a.mouseMoved(x,y);
+                break;
+        }
+        }
     }
-}
+
 

@@ -16,6 +16,7 @@ public class mainmenu {
     BufferedImage[] menulist;
     private int selector;
     int substate;
+    boolean isSelected;
 
     public mainmenu(){
         menulist = new BufferedImage[4];
@@ -33,7 +34,7 @@ public class mainmenu {
     }
     public void update(GameManager GM){
         if(substate == 1){
-            GM.GSM = 5;
+            GM.GSM = 4;
             substate = 0;
         }else if(substate == 2){
             GM.GSM = 2;
@@ -78,24 +79,26 @@ public class mainmenu {
         }
 
     }
-    public void keyPressed(int k){
-        if(k == KeyEvent.VK_S){
-            selector++;
-            if(selector > 3){
-                selector = 3;
-            }
-        }else if(k == KeyEvent.VK_W){
-            selector--;
-            if(selector < 0){
-                selector = 0;
-            }
+    public void mouseMoved(int x,int y){
+        if(x >= 947 && y >= 258 && x <= 1139 && y <= 306){
+            selector = 0;
         }
-        if(k == KeyEvent.VK_ENTER){
+        if(x >= 947 && y >= 390 && x <= 1250 && y <= 438){
+            selector = 1;
+        }
+        if(x >= 947 && y >= 522 && x <= 1169 && y <= 570){
+            selector = 2;
+        }
+        if(x >= 947 && y >= 639 && x <= 1100 && y <= 684){
+            selector = 3;
+        }
+        //947,258 start 1139,306
+        //947,390 settings 1250,438
+        //947,522 about 1169,570
+        //947,639 Quit 1100,684
+    }
+    public void mousePressed(){
             substate = selector + 1;
-            if(substate > 4){
-                substate = 4;
-            }
-        }
     }
 
 }
