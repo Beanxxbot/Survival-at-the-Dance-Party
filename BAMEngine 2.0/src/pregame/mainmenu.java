@@ -16,7 +16,6 @@ public class mainmenu {
     BufferedImage[] menulist;
     private int selector;
     int substate;
-    boolean isSelected;
 
     public mainmenu(){
         menulist = new BufferedImage[4];

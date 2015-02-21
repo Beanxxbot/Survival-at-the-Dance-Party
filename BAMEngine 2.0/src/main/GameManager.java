@@ -1,10 +1,7 @@
 package main;
 
 import audio.audiosystem;
-import pregame.about;
-import pregame.mainmenu;
-import pregame.settings;
-import pregame.splashscreen;
+import pregame.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,6 +23,7 @@ public class GameManager extends JPanel implements Runnable {
     mainmenu mm;
     settings s;
     about ab;
+    resolution r;
     int count;
     mouse m;
     keyInput I;
@@ -51,6 +49,7 @@ public class GameManager extends JPanel implements Runnable {
         mm = new mainmenu();
         ab = new about();
         s = new settings();
+        r = new resolution();
         a = new audiosystem();
         audio = new Thread(a);
         audio.start();
@@ -93,7 +92,8 @@ public class GameManager extends JPanel implements Runnable {
                     audiomanager();
                     break;
                 case 5:
-                    //Resolution Page
+                    r.update(this);
+                    r.render(g);
                     break;
                 default:
                     System.out.println("GSM ERROR");

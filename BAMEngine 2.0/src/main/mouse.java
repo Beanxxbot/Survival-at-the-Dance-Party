@@ -2,6 +2,7 @@ package main;
 
 import pregame.about;
 import pregame.mainmenu;
+import pregame.resolution;
 import pregame.settings;
 
 import java.awt.event.MouseEvent;
@@ -20,6 +21,7 @@ public class mouse implements MouseListener, MouseMotionListener {
     private mainmenu mm;
     private about a;
     private settings s;
+    private resolution r;
 
     public mouse(){
 
@@ -30,6 +32,7 @@ public class mouse implements MouseListener, MouseMotionListener {
         mm = GM.mm;
         a = GM.ab;
         s = GM.s;
+        r = GM.r;
     }
 
     @Override
@@ -51,6 +54,12 @@ public class mouse implements MouseListener, MouseMotionListener {
                 break;
             case 3:
                 a.mousePressed();
+                break;
+            case 4:
+
+                break;
+            case 5:
+                r.mousePressed();
                 break;
         }
     }
@@ -99,6 +108,12 @@ public class mouse implements MouseListener, MouseMotionListener {
                 break;
             case 3:
                 a.mouseMoved(x,y);
+                break;
+            case 4:
+
+                break;
+            case 5:
+                r.mouseMoved(x,y);
                 break;
         }
         }
