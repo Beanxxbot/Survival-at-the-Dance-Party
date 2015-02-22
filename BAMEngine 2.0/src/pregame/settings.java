@@ -1,35 +1,28 @@
 package pregame;
 
+import database.PGImageData;
 import main.GameManager;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
 /**
  * Created by James on 2/17/2015.
  */
 public class settings {
-    BufferedImage gear;
-    BufferedImage discoball;
-    BufferedImage title;
-    BufferedImage volume;
-    BufferedImage resolution;
-    BufferedImage back;
     int selected;
     int actions;
     float vol;
     int positionx = 1300;
     String convert;
+    BufferedImage gear;
+    BufferedImage discoball;
+
     public settings(){
         try {
             gear = ImageIO.read(getClass().getResourceAsStream("/menutextures/gear.png"));
             discoball = ImageIO.read(getClass().getResourceAsStream("/menutextures/discoball.png"));
-            title = ImageIO.read(getClass().getResourceAsStream("/menutextures/settings.png"));
-            volume = ImageIO.read(getClass().getResourceAsStream("/menutextures/volume.png"));
-            resolution = ImageIO.read(getClass().getResourceAsStream("/menutextures/rez.png"));
-            back = ImageIO.read(getClass().getResourceAsStream("/menutextures/back.png"));
         }catch(Exception e){
             System.out.println("Get Image Settings Error");
             e.printStackTrace();
@@ -55,30 +48,30 @@ public class settings {
                 break;
         }
     }
-    public void render(Graphics2D g){
+    public void render(Graphics2D g, PGImageData PGI){
         g.setColor(Color.decode("#00bbff"));
         g.fillRect(0,0,1366,768);
         g.drawImage(gear,50,50,640,638,null);
         g.drawImage(discoball,257,255,225,224,null);
-        g.drawImage(title.getSubimage(0,0,400,100),750,25,400,100,null);
+        g.drawImage(PGI.getImage(0).getSubimage(0,0,400,100),750,25,400,100,null);
         g.setColor(Color.decode("#9c008f"));
         g.fillRect(750,175,600,100);
         g.setColor(Color.BLACK);
         g.fillRect(positionx,155,50,140);
         //50,140
-        g.drawImage(volume,750,295,215,50,null);
+        g.drawImage(PGI.getImage(1),750,295,215,50,null);
         g.setColor(Color.decode("#9c008f"));
         g.setFont(new Font("aharoni",Font.PLAIN,80));
         g.drawString(convert,970,340);
         if(selected == 1) {
-            g.drawImage(resolution.getSubimage(550,0,550,100), 750, 390, 575, 100, null);
+            g.drawImage(PGI.getImage(2).getSubimage(550,0,550,100), 750, 390, 575, 100, null);
         }else {
-            g.drawImage(resolution.getSubimage(0,0,550,100), 750,390,575,100,null);
+            g.drawImage(PGI.getImage(2).getSubimage(0,0,550,100), 750,390,575,100,null);
         }
         if(selected == 2){
-            g.drawImage(back.getSubimage(0,0,245,100),1116,628,225,100,null);
+            g.drawImage(PGI.getImage(3).getSubimage(0, 0, 245, 100),1116,628,225,100,null);
         }else{
-            g.drawImage(back.getSubimage(245,0,245,100),1116,628,225,100,null);
+            g.drawImage(PGI.getImage(3).getSubimage(245,0,245,100),1116,628,225,100,null);
         }
     }
     public void mouseDragged(int x,int y){

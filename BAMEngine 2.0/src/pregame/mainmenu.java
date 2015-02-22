@@ -1,5 +1,6 @@
 package pregame;
 
+import database.PGImageData;
 import main.GameManager;
 
 import javax.imageio.ImageIO;
@@ -18,14 +19,12 @@ public class mainmenu {
     int substate;
 
     public mainmenu(){
-        menulist = new BufferedImage[4];
+        menulist = new BufferedImage[2];
         try{
             background = ImageIO.read(getClass().getResourceAsStream("/Backgrounds/discoball.jpg"));
             title = ImageIO.read(getClass().getResourceAsStream("/menutextures/Gaemtit.png"));
             menulist[0] = ImageIO.read(getClass().getResourceAsStream("/menutextures/start.png"));
-            menulist[1] = ImageIO.read(getClass().getResourceAsStream("/menutextures/settings.png"));
-            menulist[2] = ImageIO.read(getClass().getResourceAsStream("/menutextures/about.png"));
-            menulist[3] = ImageIO.read(getClass().getResourceAsStream("/menutextures/quit.png"));
+            menulist[1] = ImageIO.read(getClass().getResourceAsStream("/menutextures/quit.png"));
         }catch(Exception e){
             System.out.println("Background Main Menu Error");
             e.printStackTrace();
@@ -45,7 +44,7 @@ public class mainmenu {
             System.exit(0);
         }
     }
-    public void render(Graphics2D g) {
+    public void render(Graphics2D g, PGImageData PGI) {
         g.drawImage(background, -100, 0, 1366, 768, null);
         g.setColor(Color.BLACK);
         g.fillRect(1266,0,100,768);
@@ -53,27 +52,27 @@ public class mainmenu {
         switch(selector) {
             case 0:
             g.drawImage(menulist[0].getSubimage(250, 0, 250, 100), 950, 250, 189, 75, null);
-            g.drawImage(menulist[1].getSubimage(0, 0, 400, 100), 950, 380, 300, 75, null);
-            g.drawImage(menulist[2].getSubimage(0, 0, 300, 100), 950, 510, 225, 75, null);
-            g.drawImage(menulist[3].getSubimage(0, 0, 212, 100), 950, 630, 159, 75, null);
+            g.drawImage(PGI.getImage(0).getSubimage(0, 0, 400, 100), 950, 380, 300, 75, null);
+            g.drawImage(PGI.getImage(4).getSubimage(0, 0, 300, 100), 950, 510, 225, 75, null);
+            g.drawImage(menulist[1].getSubimage(0, 0, 212, 100), 950, 630, 159, 75, null);
                 break;
             case 1:
                 g.drawImage(menulist[0].getSubimage(0, 0, 250, 100), 950, 250, 189, 75, null);
-                g.drawImage(menulist[1].getSubimage(400, 0, 400, 100), 950, 380, 300, 75, null);
-                g.drawImage(menulist[2].getSubimage(0, 0, 300, 100), 950, 510, 225, 75, null);
-                g.drawImage(menulist[3].getSubimage(0, 0, 212, 100), 950, 630, 159, 75, null);
+                g.drawImage(PGI.getImage(0).getSubimage(400, 0, 400, 100), 950, 380, 300, 75, null);
+                g.drawImage(PGI.getImage(4).getSubimage(0, 0, 300, 100), 950, 510, 225, 75, null);
+                g.drawImage(menulist[1].getSubimage(0, 0, 212, 100), 950, 630, 159, 75, null);
                 break;
             case 2:
                 g.drawImage(menulist[0].getSubimage(0, 0, 250, 100), 950, 250, 189, 75, null);
-                g.drawImage(menulist[1].getSubimage(0, 0, 400, 100), 950, 380, 300, 75, null);
-                g.drawImage(menulist[2].getSubimage(300, 0, 300, 100), 950, 510, 225, 75, null);
-                g.drawImage(menulist[3].getSubimage(0, 0, 212, 100), 950, 630, 159, 75, null);
+                g.drawImage(PGI.getImage(0).getSubimage(0, 0, 400, 100), 950, 380, 300, 75, null);
+                g.drawImage(PGI.getImage(4).getSubimage(300, 0, 300, 100), 950, 510, 225, 75, null);
+                g.drawImage(menulist[1].getSubimage(0, 0, 212, 100), 950, 630, 159, 75, null);
                 break;
             case 3:
                 g.drawImage(menulist[0].getSubimage(0, 0, 250, 100), 950, 250, 189, 75, null);
-                g.drawImage(menulist[1].getSubimage(0, 0, 400, 100), 950, 380, 300, 75, null);
-                g.drawImage(menulist[2].getSubimage(0, 0, 300, 100), 950, 510, 225, 75, null);
-                g.drawImage(menulist[3].getSubimage(212, 0, 212, 100), 950, 630, 159, 75, null);
+                g.drawImage(PGI.getImage(0).getSubimage(0, 0, 400, 100), 950, 380, 300, 75, null);
+                g.drawImage(PGI.getImage(4).getSubimage(0, 0, 300, 100), 950, 510, 225, 75, null);
+                g.drawImage(menulist[1].getSubimage(212, 0, 212, 100), 950, 630, 159, 75, null);
                 break;
         }
 

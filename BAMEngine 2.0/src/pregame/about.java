@@ -1,5 +1,6 @@
 package pregame;
 
+import database.PGImageData;
 import main.GameManager;
 
 import javax.imageio.ImageIO;
@@ -13,16 +14,12 @@ import java.awt.image.BufferedImage;
 public class about {
     boolean goBack;
     boolean selected;
-    BufferedImage discoback;
-    BufferedImage title;
+    BufferedImage discoman;
     BufferedImage content;
-    BufferedImage back;
     public about(){
         try{
-            discoback = ImageIO.read(getClass().getResourceAsStream("/textures/objects/aboutdiscoman.png"));
-            title = ImageIO.read(getClass().getResourceAsStream("/menutextures/about.png"));
+            discoman = ImageIO.read(getClass().getResourceAsStream("/textures/objects/aboutdiscoman.png"));
             content = ImageIO.read(getClass().getResourceAsStream("/menutextures/abouttext.png"));
-            back = ImageIO.read(getClass().getResourceAsStream("/menutextures/back.png"));
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -33,17 +30,17 @@ public class about {
             goBack = false;
         }
     }
-    public void render(Graphics2D g){
+    public void render(Graphics2D g, PGImageData PGI){
         g.setColor(Color.decode("#9c008f"));
         g.fillRect(0,0,1366,768);
-        g.drawImage(discoback,0,50,324,600,null);
-        g.drawImage(discoback,354,50,324,600,null);
-        g.drawImage(title.getSubimage(300,0,300,100),694,25,300,100,null);
+        g.drawImage(discoman,0,50,324,600,null);
+        g.drawImage(discoman,354,50,324,600,null);
+        g.drawImage(PGI.getImage(4).getSubimage(300, 0, 300, 100),694,25,300,100,null);
         g.drawImage(content,694,75,500,650,null);
         if(selected == false){
-            g.drawImage(back.getSubimage(245,0,245,100),1116,628,225,100,null);
+            g.drawImage(PGI.getImage(3).getSubimage(245, 0, 245, 100),1116,628,225,100,null);
         }else{
-            g.drawImage(back.getSubimage(0,0,245,100),1116,628,225,100,null);
+            g.drawImage(PGI.getImage(3).getSubimage(0, 0, 245, 100),1116,628,225,100,null);
         }
 
     }

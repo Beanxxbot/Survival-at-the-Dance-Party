@@ -1,11 +1,13 @@
 package main;
 
 import audio.audiosystem;
+import database.MImageData;
+import database.PGImageData;
+import game.IntroLevel;
 import pregame.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 import java.awt.image.BufferedImage;
 
 /**
@@ -24,6 +26,9 @@ public class GameManager extends JPanel implements Runnable {
     settings s;
     about ab;
     resolution r;
+    IntroLevel l;
+    PGImageData PGI;
+    MImageData MI;
     int count;
     mouse m;
     keyInput I;
@@ -50,6 +55,7 @@ public class GameManager extends JPanel implements Runnable {
         ab = new about();
         s = new settings();
         r = new resolution();
+        PGI = new PGImageData();
         a = new audiosystem();
         audio = new Thread(a);
         audio.start();
@@ -78,22 +84,25 @@ public class GameManager extends JPanel implements Runnable {
                     break;
                 case 1:
                     mm.update(this);
-                    mm.render(g);
+                    mm.render(g,PGI);
                     break;
                 case 2:
                     s.update(this);
-                    s.render(g);
+                    s.render(g,PGI);
                     break;
                 case 3:
                     ab.update(this);
-                    ab.render(g);
+                    ab.render(g,PGI);
                     break;
                 case 4:
                     audiomanager();
+                    GameLoader();
+                    l.update(this);
+                    l.render(g,MI);
                     break;
                 case 5:
                     r.update(this);
-                    r.render(g);
+                    r.render(g,PGI);
                     break;
                 default:
                     System.out.println("GSM ERROR");
@@ -111,6 +120,17 @@ public class GameManager extends JPanel implements Runnable {
                 } catch (Exception q) {
                     q.printStackTrace();
                 }
+            }
+        }
+    }
+
+    public void GameLoader() {
+        if(GSMG != GSM) {
+            switch (GSM) {
+                case 4:
+                    MI = new MImageData();
+                    l = new IntroLevel();
+                    break;
             }
         }
     }

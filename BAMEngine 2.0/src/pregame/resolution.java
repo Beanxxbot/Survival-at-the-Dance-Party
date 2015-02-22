@@ -1,5 +1,6 @@
 package pregame;
 
+import database.PGImageData;
 import main.GameManager;
 
 import javax.imageio.ImageIO;
@@ -10,23 +11,18 @@ import java.awt.image.BufferedImage;
  * Created by James on 2/19/2015.
  */
 public class resolution {
-        BufferedImage back;
     boolean isSelected;
     boolean goBack;
     public resolution(){
-        try{
-            back = ImageIO.read(getClass().getResourceAsStream("/menutextures/back.png"));
-        }catch(Exception e){
 
         }
-    }
     public void update(GameManager GM){
         if(goBack){
             GM.GSM = 2;
             goBack = false;
         }
     }
-    public void render(Graphics2D g){
+    public void render(Graphics2D g, PGImageData PGI){
         g.setColor(Color.decode("#00bbff"));
         g.fillRect(0, 0, 1366, 768);
         g.setColor(Color.decode("#9c008f"));
@@ -36,9 +32,9 @@ public class resolution {
         g.setFont(new Font("aharoni",Font.PLAIN,50));
         g.drawString("1366 x 768",75,150);
         if(isSelected){
-            g.drawImage(back.getSubimage(0,0,245,100),1116,628,225,100,null);
+            g.drawImage(PGI.getImage(3).getSubimage(0,0,245,100),1116,628,225,100,null);
         }else{
-            g.drawImage(back.getSubimage(245,0,245,100),1116,628,225,100,null);
+            g.drawImage(PGI.getImage(3).getSubimage(245, 0, 245, 100),1116,628,225,100,null);
         }
     }
     public void mouseMoved(int x,int y){

@@ -1,5 +1,6 @@
 package main;
 
+import game.IntroLevel;
 import pregame.about;
 import pregame.mainmenu;
 import pregame.resolution;
@@ -22,6 +23,7 @@ public class mouse implements MouseListener, MouseMotionListener {
     private about a;
     private settings s;
     private resolution r;
+    private IntroLevel l;
 
     public mouse(){
 
@@ -33,6 +35,7 @@ public class mouse implements MouseListener, MouseMotionListener {
         a = GM.ab;
         s = GM.s;
         r = GM.r;
+        l = GM.l;
     }
 
     @Override
@@ -56,7 +59,7 @@ public class mouse implements MouseListener, MouseMotionListener {
                 a.mousePressed();
                 break;
             case 4:
-
+                l.mousePressed();
                 break;
             case 5:
                 r.mousePressed();
@@ -110,7 +113,7 @@ public class mouse implements MouseListener, MouseMotionListener {
                 a.mouseMoved(x,y);
                 break;
             case 4:
-
+                l.mouseMoved(x,y);
                 break;
             case 5:
                 r.mouseMoved(x,y);
