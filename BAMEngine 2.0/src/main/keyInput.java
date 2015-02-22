@@ -1,5 +1,6 @@
 package main;
 
+import game.IntroLevel;
 import pregame.about;
 import pregame.mainmenu;
 import pregame.settings;
@@ -12,13 +13,14 @@ import java.awt.event.KeyListener;
  */
 public class keyInput implements KeyListener{
     private int GSM;
+    private IntroLevel l;
     public keyInput(){
 
     }
 
     public void update(GameManager GM){
         GSM = GM.GSM;
-
+        l = GM.l;
     }
 
     @Override
@@ -28,11 +30,19 @@ public class keyInput implements KeyListener{
 
     @Override
     public void keyPressed(KeyEvent e) {
-
+        switch(GSM){
+            case 4:
+                l.keyPressed(e.getKeyCode());
+                break;
+        }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-
+        switch(GSM){
+            case 4:
+                l.keyPressed(e.getKeyCode());
+                break;
+        }
     }
 }
