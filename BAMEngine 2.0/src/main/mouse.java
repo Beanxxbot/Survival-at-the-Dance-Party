@@ -95,8 +95,8 @@ public class mouse implements MouseListener, MouseMotionListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        System.out.println("X:" + e.getX());
-        System.out.println("Y:" + e.getY());
+        //System.out.println("X:" + e.getX());
+        //System.out.println("Y:" + e.getY());
         x = e.getX();
         y = e.getY();
         switch(GSM){

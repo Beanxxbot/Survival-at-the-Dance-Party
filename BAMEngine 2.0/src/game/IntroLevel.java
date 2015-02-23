@@ -14,8 +14,9 @@ public class IntroLevel implements levelint {
     Player p;
     public IntroLevel(){
         p = new Player();
-        p.setBoundaries(1366,768,0,0);
-        p.playerSetup(0,380);
+        p.draw = true;
+        p.setBoundaries(1316,718,0,0);
+        p.playerSetup(0,330);
     }
     @Override
     public void update(GameManager GM) {
@@ -26,6 +27,7 @@ public class IntroLevel implements levelint {
     public void render(Graphics2D g, MImageData m) {
         g.setColor(Color.RED);
         g.fillRect(0,380,1366,20);
+        g.drawImage(m.getImage(0),1000,310,50,70,null);
         p.drawPlayer(g);
     }
 
@@ -46,11 +48,11 @@ public class IntroLevel implements levelint {
 
     @Override
     public void keyPressed(int k){
-        p.move(k);
+        p.checkMove(k);
     }
 
     @Override
     public void keyReleased(int k){
-
+        p.checkStop(k);
     }
 }

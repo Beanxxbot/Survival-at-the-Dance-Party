@@ -35,6 +35,7 @@ public class GameManager extends JPanel implements Runnable {
     Thread audio;
     int GSMA;
     int GSMG;
+    int GSGL;
 
     public GameManager(mouse M,keyInput Q){
         setFocusable(true);
@@ -125,7 +126,8 @@ public class GameManager extends JPanel implements Runnable {
     }
 
     public void GameLoader() {
-        if(GSMG != GSM) {
+        if(GSGL != GSM) {
+            GSGL = GSM;
             switch (GSM) {
                 case 4:
                     MI = new MImageData();
@@ -148,7 +150,7 @@ public class GameManager extends JPanel implements Runnable {
                     case 0:
                         a.start("/audio/electricfeel.mp3");
                         break;
-                    case 5:
+                    case 4:
                         a.stop();
                         a.start("/audio/greenhillzone.mp3");
                         break;
@@ -158,6 +160,7 @@ public class GameManager extends JPanel implements Runnable {
     public void drawToScreen() {
         Graphics d = getGraphics();
         d.drawImage(paintbrush, 0, 0, 1366, 768, null);
+        paintAll(g);
         d.dispose();
     }
 }

@@ -41,7 +41,7 @@ public class keyInput implements KeyListener{
     public void keyReleased(KeyEvent e) {
         switch(GSM){
             case 4:
-                l.keyPressed(e.getKeyCode());
+                l.keyReleased(e.getKeyCode());
                 break;
         }
     }

@@ -26,7 +26,7 @@ public class resolution {
         g.setColor(Color.decode("#00bbff"));
         g.fillRect(0, 0, 1366, 768);
         g.setColor(Color.decode("#9c008f"));
-        g.setFont(new Font("aharoni",Font.BOLD,80));
+        g.setFont(new Font("Aharoni",Font.BOLD,80));
         g.drawString("SUPPORTED RESOLUTIONS:",50,100);
         g.setColor(Color.yellow);
         g.setFont(new Font("aharoni",Font.PLAIN,50));

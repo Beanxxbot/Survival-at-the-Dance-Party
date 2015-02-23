@@ -35,7 +35,7 @@ public class about {
         g.fillRect(0,0,1366,768);
         g.drawImage(discoman,0,50,324,600,null);
         g.drawImage(discoman,354,50,324,600,null);
-        g.drawImage(PGI.getImage(4).getSubimage(300, 0, 300, 100),694,25,300,100,null);
+        g.drawImage(PGI.getImage(4).getSubimage(300, 0, 300, 100),694,15,300,100,null);
         g.drawImage(content,694,75,500,650,null);
         if(selected == false){
             g.drawImage(PGI.getImage(3).getSubimage(245, 0, 245, 100),1116,628,225,100,null);

@@ -1,5 +1,6 @@
 package player;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
@@ -15,33 +16,39 @@ public class Player {
     int bottom;
     int left;
     int right;
+    public boolean draw;
+    public int mcode;
+    int animation;
     public Player(){
         playerx = 0;
         playery = 0;
+        draw = false;
         try{
-            //Load Player Image
+            player = ImageIO.read(getClass().getResourceAsStream("/textures/player/player.png"));
         }catch(Exception e){
-            //Catch
+            e.printStackTrace();
+            System.out.println("Error retrieving player");
         }
     }
     public void playerSetup(int x,int y){
         playerx = x;
         playery = y;
+        draw = false;
     }
     private void updatePlayer(int x,int y) {
         playerx += x;
-        playery += y;
         if(playerx >= right){
             playerx = right;
-        }
-        if(playery >= bottom){
-            playery = bottom;
         }
         if(playerx <= left){
             playerx = left;
         }
+        playery += y;
         if(playery <= top){
             playery = top;
+        }
+        if(playery >= bottom){
+            playery = bottom;
         }
     }
     public void move(int k){
@@ -55,8 +62,22 @@ public class Player {
             updatePlayer(-4,0);
         }
     }
+    public void checkMove(int k) {
+        if (k == KeyEvent.VK_W || k == KeyEvent.VK_D || k == KeyEvent.VK_A || k == KeyEvent.VK_SPACE) {
+            draw = true;
+            mcode = k;
+        }else{
+            draw = false;
+        }
+    }
+    public void checkStop(int k){
+        if (k == KeyEvent.VK_W || k == KeyEvent.VK_D || k == KeyEvent.VK_A || k == KeyEvent.VK_SPACE) {
+            draw = false;
+            mcode = 0;
+        }
+    }
     private void jump(int y){
-        playery = playery - y;
+        //playery = playery - y;
     }
     public void setBoundaries(int x, int y, int x2, int y2){
         top = y2;
@@ -65,6 +86,15 @@ public class Player {
         left = x2;
     }
     public void drawPlayer(Graphics2D g){
-        g.drawImage(player,playerx,playery,50,50,null);
+        if(draw){
+            animation += 256;
+            if(animation >= 768){
+                animation = 0;
+            }
+        }else{
+            animation = 0;
+        }
+        move(mcode);
+        g.drawImage(player.getSubimage(0,animation,256,256),playerx,playery,50,50,null);
     }
 }
