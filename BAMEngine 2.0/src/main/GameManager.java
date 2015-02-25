@@ -4,6 +4,7 @@ import audio.audiosystem;
 import database.MImageData;
 import database.PGImageData;
 import game.IntroLevel;
+import game.PausedState;
 import pregame.*;
 
 import javax.swing.*;
@@ -27,15 +28,18 @@ public class GameManager extends JPanel implements Runnable {
     about ab;
     resolution r;
     IntroLevel l;
+    PausedState p;
     PGImageData PGI;
     MImageData MI;
     int count;
+    public int pGSM;
     mouse m;
     keyInput I;
     Thread audio;
     int GSMA;
     int GSMG;
     int GSGL;
+    public boolean hasReturned;
 
     public GameManager(mouse M,keyInput Q){
         setFocusable(true);
@@ -84,6 +88,7 @@ public class GameManager extends JPanel implements Runnable {
                     }
                     break;
                 case 1:
+                    audiomanager();
                     mm.update(this);
                     mm.render(g,PGI);
                     break;
@@ -104,6 +109,11 @@ public class GameManager extends JPanel implements Runnable {
                 case 5:
                     r.update(this);
                     r.render(g,PGI);
+                    break;
+                case 6:
+                    GameLoader();
+                    p.update(this,MI);
+                    p.render(g);
                     break;
                 default:
                     System.out.println("GSM ERROR");
@@ -133,6 +143,9 @@ public class GameManager extends JPanel implements Runnable {
                     MI = new MImageData();
                     l = new IntroLevel();
                     break;
+                case 6:
+                    p = new PausedState();
+                    break;
             }
         }
     }
@@ -149,6 +162,12 @@ public class GameManager extends JPanel implements Runnable {
                 switch (GSMA) {
                     case 0:
                         a.start("/audio/electricfeel.mp3");
+                        break;
+                    case 1:
+                        if(hasReturned) {
+                            a.stop();
+                            a.start("/audio/electricfeel.mp3");
+                        }
                         break;
                     case 4:
                         a.stop();

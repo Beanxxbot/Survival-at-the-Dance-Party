@@ -35,6 +35,7 @@ public class mainmenu {
             GM.GSM = 4;
             substate = 0;
         }else if(substate == 2){
+            GM.pGSM = 1;
             GM.GSM = 2;
             substate = 0;
         }else if(substate == 3){

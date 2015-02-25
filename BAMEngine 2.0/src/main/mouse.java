@@ -1,6 +1,7 @@
 package main;
 
 import game.IntroLevel;
+import game.PausedState;
 import pregame.about;
 import pregame.mainmenu;
 import pregame.resolution;
@@ -24,6 +25,7 @@ public class mouse implements MouseListener, MouseMotionListener {
     private settings s;
     private resolution r;
     private IntroLevel l;
+    private PausedState p;
 
     public mouse(){
 
@@ -36,6 +38,7 @@ public class mouse implements MouseListener, MouseMotionListener {
         s = GM.s;
         r = GM.r;
         l = GM.l;
+        p = GM.p;
     }
 
     @Override
@@ -63,6 +66,9 @@ public class mouse implements MouseListener, MouseMotionListener {
                 break;
             case 5:
                 r.mousePressed();
+                break;
+            case 6:
+                p.mousePressed();
                 break;
         }
     }
@@ -95,8 +101,8 @@ public class mouse implements MouseListener, MouseMotionListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        //System.out.println("X:" + e.getX());
-        //System.out.println("Y:" + e.getY());
+        System.out.println("X:" + e.getX());
+        System.out.println("Y:" + e.getY());
         x = e.getX();
         y = e.getY();
         switch(GSM){
@@ -117,6 +123,9 @@ public class mouse implements MouseListener, MouseMotionListener {
                 break;
             case 5:
                 r.mouseMoved(x,y);
+                break;
+            case 6:
+                p.mouseMoved(x,y);
                 break;
         }
         }

@@ -42,7 +42,7 @@ public class settings {
                 selected = 0;
                 break;
             case 2:
-                GM.GSM = 1;
+                GM.GSM = GM.pGSM;
                 actions = 0;
                 selected = 0;
                 break;
