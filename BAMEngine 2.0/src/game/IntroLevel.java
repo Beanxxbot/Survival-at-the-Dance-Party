@@ -4,6 +4,7 @@ import database.MImageData;
 import interfaces.levelint;
 import main.GameManager;
 import player.Player;
+import dialog.Dialog;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -13,9 +14,13 @@ import java.awt.event.KeyEvent;
  */
 public class IntroLevel implements levelint {
     Player p;
+    Dialog d;
     boolean isPaused;
+    boolean notDone;
     public IntroLevel(){
         p = new Player();
+        d = new Dialog();
+        d.numChar = 2;
         p.draw = true;
         p.setBoundaries(1316,718,0,0);
         p.playerSetup(0,330);
@@ -26,6 +31,15 @@ public class IntroLevel implements levelint {
             GM.pGSM = GM.GSM;
             GM.GSM = 6;
             isPaused = false;
+        }
+        if(notDone == false){
+
+        }else if(d.dState == d.dState % 2){
+            d.speakers[1] = "Door Guard";
+            d.updateProf("/textures/doorguard/DoorGuard.png");
+        }else if(d.dState == d.dState){
+            d.speakers[2] = "Player";
+            d.updateProf("/textures/profile/defaultprof.png");
         }
     }
 
@@ -38,6 +52,7 @@ public class IntroLevel implements levelint {
         g.drawImage(m.getImage(0),1000,310,50,70,null);
         p.drawPlayer(g);
         g.drawImage(m.getImage(1), 900, 100, 30, 26,null);
+        d.render(g,m);
     }
 
     @Override
@@ -60,6 +75,8 @@ public class IntroLevel implements levelint {
         p.checkMove(k);
         if(k == KeyEvent.VK_ESCAPE){
             isPaused = true;
+        }else if(k == KeyEvent.VK_ENTER){
+            d.changeDialog();
         }
     }
 

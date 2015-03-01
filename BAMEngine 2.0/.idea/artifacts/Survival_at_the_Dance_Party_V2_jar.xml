@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Survival-at-the-Dance-Party V2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Survival_at_the_Dance_Party_V2_jar</output-path>
+    <root id="archive" name="Survival-at-the-Dance-Party V2.jar">
+      <element id="module-output" name="Survival-at-the-Dance-Party V2" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/jlayer1.0.1/JLayer1.0.1/jl1.0.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

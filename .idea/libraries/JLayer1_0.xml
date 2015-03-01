@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="JLayer1.0">
+  <library name="jlayer1.0">
     <CLASSES>
-      <root url="file://$USER_HOME$/Downloads/jlayer1.0.1/JLayer1.0.1" />
+      <root url="file://$USER_HOME$/Downloads/jlayer1.0.1" />
     </CLASSES>
     <JAVADOC>
       <root url="file://$USER_HOME$/Downloads/jlayer1.0.1/JLayer1.0.1/doc" />
@@ -10,6 +10,5 @@
       <root url="file://$USER_HOME$/Downloads/jlayer1.0.1/JLayer1.0.1/src" />
       <root url="file://$USER_HOME$/Downloads/jlayer1.0.1/JLayer1.0.1/srctest" />
     </SOURCES>
-    <jarDirectory url="file://$USER_HOME$/Downloads/jlayer1.0.1/JLayer1.0.1" recursive="false" />
   </library>
 </component>

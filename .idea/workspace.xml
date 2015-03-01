@@ -2,13 +2,159 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a90083a-8c16-41f9-a56b-5b3d48ffa8e0" name="Default" comment="Version 0.0.5&#10;-Decided that bubble system for dialog should be changed&#10;-Alphabet library finishing created&#10;-Main Database file still needs to be">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/data/datacore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/reference/AlphabetLibrary.java" afterPath="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/reference/AlphabetLibrary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/IntroLevel.java" afterPath="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/IntroLevel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\gamestates\GameState.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areaone\AreaOneDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\objects\speechbub.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\textures\doorguard\DoorGuard.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\gamestates\OpeningState.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\gamestates\Paused.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\inventoryload\InventoryLoad.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\main\SADPMain.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\levels\LevelBlueprint.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\gamestates\Paused.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\reference\AlphabetLibrary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areaone\AreaOneDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areanineteen\AreaNineteenDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\main\GamePanel.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areatwenty\AreaTwentyDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Survival-at-the-Dance-Party.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\objects\HellDoor.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areanineteen\AreaNineteenDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areatwelve\AreaTwelveDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\Player\Stick-4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\gamestates\AboutState.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\gamestates\GameState.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\gamestates\SettingsState.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\Player\tempplayer.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\To-Do Information" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areatwo\AreaTwoDialogQuestions.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\reference\Reference.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\main\GamePanel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\Player\Stick-2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\audio\greenhillzone.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\audio\archer.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\textures\missingtexture.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\gamestates\MenuState.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\graphics\SplashScreen.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\items\ItemLibrary.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areatwo\AreaTwoDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\graphics\MapBackground.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\Player\tempplayer.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\Player\Stick.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areaseventeen\AreaSeventeenDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\textures\player\player1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areathree\AreaThreeDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\audio\MainMenu.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areatwo\AreaTwoDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\reference\Reference.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areaeighteen\AreaEighteenDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\audio\fireball.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areafourteen\AreaFourteenDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areaten\AreaTenDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areaeleven\AreaElevenDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\graphics\Background.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\Player\Stick.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areafourteen\AreaFourteenDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areafifteen\AreaFifteenDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\graphics\Background.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\main\SADPMain.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\Player\Stick-4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\textures\player\player.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\gamestates\SettingsState.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\audio\fireball.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areaeight\AreaEightDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\COPYRIGHTNOTICE.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areaeight\AreaEightDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\util\Speaking.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\Player\Stick-2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\textures\player\player.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areaeighteen\AreaEighteenDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areathree\AreaThreeDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areathirteen\AreaThirteenDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\levels\OpeningParty.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areathirteen\AreaThirteenDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\audio\archer.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\textures\player\player1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\audio\10-10.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\audio\MainMenu.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\Player\character.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\audio\10-10.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Story Information" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\audio\hello.aiff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areasixteen\AreaSixteenDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\Player\Stick-3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areanine\AreaNineDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\items\ItemLibrary.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\Backgrounds\tempbackground.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areaseven\AreaSevenDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\gamestates\StateBlueprint.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\audio\hello.aiff" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\levels\IntroLevel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areatwenty\AreaTwentyDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\reference\AlphabetLibrary.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\gamestates\OpeningState.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\textures\doorguard\DoorGuard.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areaeleven\AreaElevenDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areafour\AreaFourDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areaseventeen\AreaSeventeenDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\audio\intro.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\util\NamePrompt.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areaseven\AreaSevenDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areafour\AreaFourDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\levels\LevelBlueprint.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\levels\IntroLevel.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\levels\data\datacore.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\gamestates\AboutState.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\Player\character.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areafive\AreaFiveDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areafive\AreaFiveDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\graphics\Player.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areatwo\AreaTwoDialogQuestions.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\audio\greenhillzone.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\BAMLogo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\gamestates\StateBlueprint.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\gamestates\MenuState.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areaten\AreaTenDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\audio\Library\jlayer1.0.1\JLayer1.0.1\JLayer1.0.1.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areafifteen\AreaFifteenDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/jlayer1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\objects\HellDoor.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\inventoryload\InventoryLoad.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areatwelve\AreaTwelveDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areasix\AreaSixDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\graphics\SplashScreen.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\audio\intro.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\maps\SADP Map Draft.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\levels\OpeningParty.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\util\NamePrompt.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\util\Speaking.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\Backgrounds\tempbackground.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\Player\Stick-3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\textures\missingtexture.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\graphics\MapBackground.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\Resources\BAMLogo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areasixteen\AreaSixteenDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\maps\SADP Map Draft.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\src\com\bamgames\survivalatthedanceparty\areasix\AreaSixDialog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\graphics\Player.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\James\Documents\GitHub\Survival-at-the-Dance-Party\out\production\Survival-at-the-Dance-Party\com\bamgames\survivalatthedanceparty\areanine\AreaNineDialog.class" afterPath="" />
     </list>
     <ignored path="Survival-at-the-Dance-Party.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,88 +173,7 @@
     <favorites_list name="Survival-at-the-Dance-Party" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="IntroLevel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/IntroLevel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3995">
-              <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datacore.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/data/datacore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18358532" vertical-offset="0" max-vertical-offset="463">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AreaOneDialog.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/areaone/AreaOneDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1309">
-              <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameState.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/GameState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="3281">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlphabetLibrary.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/reference/AlphabetLibrary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5576">
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GamePanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/main/GamePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2601" max-vertical-offset="4692">
-              <caret line="153" column="24" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuState.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/MenuState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1632">
-              <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OpeningParty.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/OpeningParty.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1003">
-              <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -120,27 +185,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/OpeningParty.java" />
-        <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/Paused.java" />
-        <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/areaone/AreaOneDialog.java" />
-        <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/audio/IntroLevel.java" />
-        <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/audio/IntroLevelA.java" />
-        <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/MenuState.java" />
-        <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/main/GamePanel.java" />
         <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/audio/MainMenu.java" />
-        <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/GameState.java" />
-        <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/reference/AlphabetLibrary.java" />
-        <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/IntroLevel.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="width" value="1936" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -177,82 +232,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Survival-at-the-Dance-Party" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Survival-at-the-Dance-Party" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Survival-at-the-Dance-Party" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Survival-at-the-Dance-Party" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="survivalatthedanceparty" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Survival-at-the-Dance-Party" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Survival-at-the-Dance-Party" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="survivalatthedanceparty" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levels" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Survival-at-the-Dance-Party" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Survival-at-the-Dance-Party" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="survivalatthedanceparty" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levels" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -275,39 +254,12 @@
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jlayer1.0.1/JLayer1.0.1" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jlayer1.0.1/JLayer1.0.1/jl1.0.1.jar!/" />
     <property name="dynamic.classpath" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RunManager" selected="Application.SADPMain">
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -316,61 +268,8 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.bamgames.survivalatthedanceparty.main.SADPMain" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Survival-at-the-Dance-Party" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -410,7 +309,112 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.bamgames.survivalatthedanceparty.main.SADPMain" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Survival-at-the-Dance-Party" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="false" name="SADPMain" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="com.bamgames.survivalatthedanceparty.main.SADPMain" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -448,37 +452,39 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="1a90083a-8c16-41f9-a56b-5b3d48ffa8e0" name="Default" comment="" />
       <created>1416020686083</created>
+      <option name="number" value="Default" />
       <updated>1416020686083</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1060" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39895698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32985657" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39895698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -499,395 +505,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/audio/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="816">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/areaone/AreaOneDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1411">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/IntroLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1180" max-vertical-offset="3196">
-          <caret line="86" column="37" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/main/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2533" max-vertical-offset="4692">
-          <caret line="149" column="36" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/MenuState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1751">
-          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/Paused.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1190">
-          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/audio/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="816">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/areaone/AreaOneDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1411">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/IntroLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1180" max-vertical-offset="3196">
-          <caret line="86" column="37" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/main/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2533" max-vertical-offset="4692">
-          <caret line="149" column="36" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/MenuState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1751">
-          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/Paused.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1190">
-          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/audio/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="816">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/areaone/AreaOneDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1411">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/IntroLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1214" max-vertical-offset="3196">
-          <caret line="93" column="44" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/main/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2533" max-vertical-offset="4692">
-          <caret line="149" column="36" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/MenuState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1751">
-          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/Paused.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1190">
-          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/audio/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="816">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/areaone/AreaOneDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1411">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/IntroLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1231" max-vertical-offset="3196">
-          <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/main/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2533" max-vertical-offset="4692">
-          <caret line="149" column="36" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/MenuState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1751">
-          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/Paused.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1190">
-          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/audio/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="816">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/areaone/AreaOneDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1411">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/IntroLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2805">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/main/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="4692">
-          <caret line="149" column="36" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/MenuState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="1751">
-          <caret line="71" column="45" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/Paused.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1190">
-          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/audio/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="296" max-vertical-offset="782">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/areaone/AreaOneDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1411">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/IntroLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2805">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/main/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="4692">
-          <caret line="149" column="36" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/MenuState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="1751">
-          <caret line="71" column="45" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/Paused.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1190">
-          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/audio/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="314" max-vertical-offset="816">
-          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/areaone/AreaOneDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1411">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/graphics/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7345679" vertical-offset="0" max-vertical-offset="1751">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/graphics/Background.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17489712" vertical-offset="0" max-vertical-offset="486">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/graphics/SplashScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1399177" vertical-offset="0" max-vertical-offset="486">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/Paused.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
-          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/audio/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="782">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/OpeningParty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="935">
-          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/main/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4454">
-          <caret line="153" column="24" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/GameState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3281">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/reference/AlphabetLibrary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5576">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/gamestates/MenuState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="1632">
-          <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/areaone/AreaOneDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1309">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/IntroLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3995">
-          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/levels/data/datacore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18358532" vertical-offset="0" max-vertical-offset="463">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -928,7 +550,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -940,12 +562,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>JLayer1.0.1</last-edited>
+          <last-edited>Survival-at-the-Dance-Party</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -965,7 +586,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>JLayer1.0</last-edited>
+          <last-edited>jl1.0.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -978,4 +599,3 @@
     </states>
   </component>
 </project>
-
