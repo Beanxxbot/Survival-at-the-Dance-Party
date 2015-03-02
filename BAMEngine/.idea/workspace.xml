@@ -130,6 +130,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/audio/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/com/bamgames/survivalatthedanceparty/graphics/Player.java" />
       </list>
     </option>
   </component>
@@ -165,8 +166,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -494,7 +495,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="4" width="1936" height="1096" extended-state="0" />
+    <frame x="-13" y="4" width="1936" height="1096" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />

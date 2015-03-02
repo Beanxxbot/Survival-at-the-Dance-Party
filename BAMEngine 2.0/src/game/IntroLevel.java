@@ -48,10 +48,10 @@ public class IntroLevel implements levelint {
         g.setColor(Color.decode("#661400"));
         g.fillRect(0, 0, 1366,768);
         g.setColor(Color.RED);
-        g.fillRect(0,380,1366,20);
-        g.drawImage(m.getImage(0),1000,310,50,70,null);
+        g.fillRect(0,581,1366,20);
+        g.drawImage(m.getImage(0),1000,310,125,175,null);
         p.drawPlayer(g);
-        g.drawImage(m.getImage(1), 900, 100, 30, 26,null);
+        g.drawImage(m.getImage(1), 900, 100, 60, 52,null);
         d.render(g,m);
     }
 

@@ -95,6 +95,6 @@ public class Player {
             animation = 0;
         }
         move(mcode);
-        g.drawImage(player.getSubimage(0,animation,256,256),playerx,playery,50,50,null);
+        g.drawImage(player.getSubimage(0,animation,256,256),playerx,playery,100,100,null);
     }
 }

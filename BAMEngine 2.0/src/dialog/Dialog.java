@@ -31,7 +31,7 @@ public class Dialog {
         g.fillRect(2, 602, 1374, 126);
         g.setColor(Color.GRAY);
         g.drawRect(1, 601, 1355, 110);
-        g.drawImage(profile,20,620,75,75,null);
+        g.drawImage(profile,20,620,30,30,null);
     }
 
     public void updateProf(String path){
